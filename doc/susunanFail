@@ -1,0 +1,47 @@
+IRKVKS/
+│
+├── index.php                 ← Landing Page
+│
+├── pages/
+│   ├── login.php
+│   ├── dashboard.php
+│   ├── ciri-ciri.php
+│   ├── tentang.php
+│   ├── bantuan.php
+│   └── hubungi.php
+│
+├── components/
+│   ├── head.php
+│   ├── nav.php
+│   ├── footer.php
+│   └── sidebar.php
+│
+├── asset/
+│   ├── css/
+│   │   ├── nav.css
+│   │   ├── hero.css
+│   │   ├── footer.css
+│   │   ├── login.css      ← CSS login
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── script.js
+│   │
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── kvHero.jpg
+│   │   └── banner.png
+│   │
+│   └── icons/
+│
+├── config/
+│   ├── connection.php      ← Sambungan database
+│   └── config.php
+│
+├── auth/
+│   ├── login_process.php   ← Proses semak login
+│   ├── logout.php
+│   └── session.php
+│
+└── database/
+    └── irkvks.sql
