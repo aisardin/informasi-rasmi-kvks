@@ -45,7 +45,7 @@ else{
     echo "
         <script>
             alert('Login Gagal');
-            window.location='login.php';
+            window.location='../pages/login.php';
         </script>
     ";
 

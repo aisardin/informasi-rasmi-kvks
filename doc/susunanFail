@@ -3,12 +3,11 @@ IRKVKS/
 ├── index.php                 ← Landing Page
 │
 ├── pages/
-│   ├── login.php
-│   ├── dashboard.php
-│   ├── ciri-ciri.php
-│   ├── tentang.php
-│   ├── bantuan.php
-│   └── hubungi.php
+|   ├── pensyarah/
+|   |   └── dashboard.php
+│   └── pelajar/
+|       └── dashboard.php
+│
 │
 ├── components/
 │   ├── head.php
@@ -18,11 +17,9 @@ IRKVKS/
 │
 ├── asset/
 │   ├── css/
-│   │   ├── nav.css
-│   │   ├── hero.css
-│   │   ├── footer.css
+│   │   ├── component.css
 │   │   ├── login.css      ← CSS login
-│   │   └── style.css
+│   │   └── heroSection.css
 │   │
 │   ├── js/
 │   │   └── script.js

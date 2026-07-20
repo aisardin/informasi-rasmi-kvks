@@ -3,56 +3,119 @@ include("../components/config.php");
 include("../components/head.php");
 ?>
 <style>
-*{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Poppins,sans-serif;
-        }
+/* Reset dan font dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:#f4f4f4;
-        }
+/* Body dengan background gradien halus dan pusat konten */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
 
-        .card{
-            width:350px;
-            background:white;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0 0 20px rgba(0,0,0,.1);
-        }
+/* Card login dengan efek modern dan transisi */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .card h2{
-            text-align:center;
-            margin-bottom:20px;
-        }
+/* Efek hover pada card agar sedikit mengangkat */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
 
-        input,
-        select{
-            width:100%;
-            padding:12px;
-            margin-bottom:15px;
-            border:1px solid #ccc;
-            border-radius:8px;
-        }
+/* Judul login yang lebih modern */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.8em;
+}
 
-        button{
-            width:100%;
-            padding:12px;
-            border:none;
-            background:#007bff;
-            color:white;
-            border-radius:8px;
-            cursor:pointer;
-        }
+/* Input dan select dengan gaya modern dan transisi */
+input,
+select {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
 
-        button:hover{
-            background:#0056b3;
-        }
+/* Fokus input dan select dengan efek */
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Button dengan gradien halus dan efek hover */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Efek hover pada tombol */
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.02);
+}
+
+/* Optional: Style untuk role options jika nanti ditambahkan */
+.role-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.role-options label {
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.role-options input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #007bff;
+}
+
+/* Responsive design agar tetap menarik di perangkat kecil */
+@media(max-width: 400px) {
+  .card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
 </style>
 
 <body>

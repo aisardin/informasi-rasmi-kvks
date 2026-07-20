@@ -1,0 +1,307 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:270px;
+    height:100vh;
+
+    background:linear-gradient(180deg,#0f172a,#1d4ed8);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:20px;
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+/* collapse */
+
+.sidebar.close{
+
+    width:90px;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.logo img{
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.logo-text{
+
+    transition:.3s;
+
+}
+
+.logo h2{
+
+    color:white;
+    font-size:24px;
+
+}
+
+.logo p{
+
+    color:#d1d5db;
+    font-size:12px;
+
+}
+
+/* collapse */
+
+.sidebar.close .logo-text{
+
+    display:none;
+
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+.menu{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.menu a.active{
+
+    background:white;
+
+    color:#2563eb;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.menu a i{
+
+    font-size:20px;
+    width:25px;
+    text-align:center;
+
+}
+
+/* collapse */
+
+.sidebar.close .menu span{
+
+    display:none;
+
+}
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.logout{
+
+    margin-top:20px;
+
+}
+
+.logout a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.logout a:hover{
+
+    background:#ef4444;
+
+}
+
+.logout i{
+
+    font-size:20px;
+    width:25px;
+    text-align:center;
+
+}
+
+.sidebar.close .logout span{
+
+    display:none;
+
+}
+
+/* ===========================
+   TOGGLE BUTTON
+=========================== */
+
+.toggle{
+
+
+    color:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.main-content{
+
+    margin-left:270px;
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.sidebar.close ~ .main-content{
+
+    margin-left:90px;
+
+}
+
+/* ===========================
+   SCROLL
+=========================== */
+
+.sidebar{
+
+    overflow-y:auto;
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+    width:0px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#94a3b8;
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    left:-270px;
+
+}
+
+.sidebar.show{
+
+    left:0;
+
+}
+
+.main-content{
+
+    margin-left:0;
+
+}
+
+}
