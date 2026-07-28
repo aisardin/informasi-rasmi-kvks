@@ -38,11 +38,16 @@ html, body{
 }
 
 /* Logo */
+.logo{
+    margin: 0;
+}
+
 .logo a{
     text-decoration:none;
-    font-size:28px;
+    font-size:18px;
     font-weight:bold;
     color:#0d6efd;
+    margin-bottom:40px;
 }
 
 /* Menu */

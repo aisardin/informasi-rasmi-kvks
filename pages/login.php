@@ -1,157 +1,244 @@
 <?php
-include("../components/config.php");
-include("../components/head.php");
-?>
-<style>
-/* Reset dan font dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+session_start();
 
-/* Body dengan background gradien halus dan pusat konten */
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-  font-family: 'Poppins', sans-serif;
-  padding: 20px;
-}
+if (isset($_SESSION['user_id'])) {
 
-/* Card login dengan efek modern dan transisi */
-.card {
-  width: 100%;
-  max-width: 400px;
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Efek hover pada card agar sedikit mengangkat */
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Judul login yang lebih modern */
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-  font-weight: 600;
-  font-size: 1.8em;
-}
-
-/* Input dan select dengan gaya modern dan transisi */
-input,
-select {
-  width: 100%;
-  padding: 14px 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  font-size: 14px;
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
-}
-
-/* Fokus input dan select dengan efek */
-input:focus,
-select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
-  outline: none;
-  transform: scale(1.02);
-}
-
-/* Button dengan gradien halus dan efek hover */
-button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
-}
-
-/* Efek hover pada tombol */
-button:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  transform: scale(1.02);
-}
-
-/* Optional: Style untuk role options jika nanti ditambahkan */
-.role-options {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.role-options label {
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s;
-}
-
-.role-options input[type="radio"] {
-  margin-right: 8px;
-  accent-color: #007bff;
-}
-
-/* Responsive design agar tetap menarik di perangkat kecil */
-@media(max-width: 400px) {
-  .card {
-    width: 90%;
-    padding: 30px 20px;
+  if ($_SESSION['role'] == "pelajar") {
+    header("Location: dashboard-pelajar.php");
+    exit();
   }
+
+  if ($_SESSION['role'] == "pensyarah") {
+    header("Location: dashboard-pensyarah.php");
+    exit();
+  }
+
+}
+
+include("../components/config.php");
+include("../components/header.php");
+?>
+
+<link rel="stylesheet" href="../asset/css/login.css">
+<style>
+  /* ==========================
+    ROLE SELECTED
+========================== */
+
+.role-card.selected div{
+
+    border-color:#0d6efd;
+
+    background:#eff6ff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(13,110,253,.15);
+
+}
+
+/* Hover */
+
+.role-card div{
+
+    transition:.3s;
+
+}
+
+.role-card:hover div{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
 }
 </style>
-
 <body>
 
-<div class="card">
+  <div class="login-container">
 
-    <h2>Login IR-KVKS</h2>
+    <!-- ===========================
+            LEFT PANEL
+    ============================ -->
 
-    <form action="../auth/login_process.php" method="POST">
+    <div class="login-left">
 
-        <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            required
-        >
+      <div class="overlay"></div>
 
-        <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-        >
+      <div class="left-content">
 
-        <select name="role" required>
-            <option value="">-- Pilih Role --</option>
-            <option value="pelajar">Pelajar</option>
-            <option value="pensyarah">Pensyarah</option>
-        </select>
+        <img src="../asset/images/logo.png" class="logo">
 
-        <button type="submit">
-            Login
-        </button>
+        <h1>IR-KVKS</h1>
 
-    </form>
+        <h3>
+          Sistem Perkongsian Maklumat
+          <br>
+          Rasmi Guru & Pelajar
+        </h3>
 
-</div>
+        <div class="line"></div>
+
+        <p>
+          Platform rasmi untuk perkongsian maklumat,
+          bahan pembelajaran, pengumuman dan komunikasi
+          antara guru dan pelajar Kolej Vokasional.
+        </p>
+
+      </div>
+
+      <div class="quote-box">
+
+        <i class="fa-solid fa-quote-left"></i>
+
+        <p>
+
+          Pendidikan adalah senjata paling ampuh
+          yang boleh anda gunakan untuk mengubah dunia.
+
+        </p>
+
+        <span>— Nelson Mandela</span>
+
+      </div>
+
+    </div>
+
+    <!-- ===========================
+            RIGHT PANEL
+    ============================ -->
+
+    <div class="login-right">
+
+      <div class="login-card">
+
+        <h2>Log Masuk ke Akaun Anda</h2>
+
+        <p class="subtitle">
+          Sila masukkan maklumat akaun anda.
+        </p>
+
+        <form action="../auth/login_process.php" method="POST">
+
+          <!-- Username -->
+
+          <div class="input-group">
+
+            <label>ID Pengguna</label>
+
+            <div class="input-box">
+
+              <i class="fa-regular fa-user"></i>
+
+              <input type="text" name="username" placeholder="Masukkan ID Pengguna" required>
+
+            </div>
+
+          </div>
+
+          <!-- Password -->
+
+          <div class="input-group">
+
+            <label>Kata Laluan</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-lock"></i>
+
+              <input type="password" id="password" name="password" placeholder="Masukkan Kata Laluan" required>
+
+              <i class="fa-regular fa-eye-slash toggle-password" id="togglePassword">
+              </i>
+
+            </div>
+
+          </div>
+
+          <!-- Remember -->
+
+          <div class="remember">
+
+            <label>
+
+              <input type="checkbox">
+
+              Ingat Saya
+
+            </label>
+
+            <a href="#">
+              Lupa Kata Laluan?
+            </a>
+
+          </div>
+
+          <!-- ROLE -->
+
+          <h4>Log Masuk Sebagai</h4>
+
+          <div class="role-container">
+
+            <label class="role-card">
+
+              <input type="radio" name="role" value="pensyarah" required>
+
+              <div>
+
+                <i class="fa-solid fa-user-tie"></i>
+
+                <h5>Pensyarah</h5>
+
+                <span>Log masuk sebagai Pensyarah</span>
+
+              </div>
+
+            </label>
+
+            <label class="role-card">
+
+              <input type="radio" name="role" value="pelajar" required>
+
+              <div>
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h5>Pelajar</h5>
+
+                <span>Log masuk sebagai Pelajar</span>
+
+              </div>
+
+            </label>
+
+          </div>
+
+          <!-- BUTTON -->
+
+          <button type="submit">
+
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            Log Masuk
+
+          </button>
+
+        </form>
+
+        <div class="copyright">
+
+          © 2026 IR-KVKS. Hak Cipta Terpelihara.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../asset/js/login.js"></script>
 
 </body>
+
+</html>

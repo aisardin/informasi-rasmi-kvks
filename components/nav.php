@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IR-KVKS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>asset/css/component.css">
+
 </head>
 <body>
 
