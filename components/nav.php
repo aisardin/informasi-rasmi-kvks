@@ -23,7 +23,7 @@
     </ul>
 
     <div class="login">
-        <a href="/dashboard/IRKVKS/pages/login.php" class="btn-login">Log Masuk</a>
+        <a href="pages/login.php" class="btn-login">Log Masuk</a>
     </div>
 
 </nav>

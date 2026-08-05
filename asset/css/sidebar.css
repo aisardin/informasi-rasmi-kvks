@@ -1,307 +1,184 @@
 /* ===========================
-   GOOGLE FONT
-=========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-/* ===========================
    SIDEBAR
 =========================== */
 
-.sidebar{
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100vh;
 
-    position:fixed;
+    background: linear-gradient(180deg,#0f172a,#2563eb);
 
-    top:0;
-    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    width:270px;
-    height:100vh;
+    padding: 22px;
 
-    background:linear-gradient(180deg,#0f172a,#1d4ed8);
+    transition: .35s;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    z-index: 1000;
 
-    padding:20px;
+    overflow-y: auto;
 
-    transition:.3s;
-
-    z-index:1000;
-
+    /* Sidebar ditutup secara default */
+    transform: translateX(-100%);
 }
 
-/* collapse */
+.sidebar.show{
+    transform: translateX(0);
+}
 
-.sidebar.close{
+/* Hide Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
 
-    width:90px;
+.sidebar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
+/* ===========================
+   CLOSE SIDEBAR (Desktop)
+=========================== */
+
+.sidebar.close {
+    transform: translateX(-100%);
 }
 
 /* ===========================
    LOGO
 =========================== */
 
-.logo{
-
-    display:flex;
-    align-items:center;
-
-    gap:15px;
-
-    margin-bottom:35px;
-
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
 }
 
-.logo img{
-
-    width:55px;
-    height:55px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
+.logo-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
 }
 
-.logo-text{
-
-    transition:.3s;
-
+.logo-text h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
 }
 
-.logo h2{
-
-    color:white;
-    font-size:24px;
-
-}
-
-.logo p{
-
-    color:#d1d5db;
-    font-size:12px;
-
-}
-
-/* collapse */
-
-.sidebar.close .logo-text{
-
-    display:none;
-
+.logo-text span {
+    color: #dbeafe;
+    font-size: 12px;
 }
 
 /* ===========================
    MENU
 =========================== */
 
-.menu{
-
-    display:flex;
-    flex-direction:column;
-
-    gap:8px;
-
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.menu a{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:15px 18px;
-
-    border-radius:14px;
-
-    transition:.3s;
-
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 14px;
+    transition: 0.25s;
+    font-size: 15px;
 }
 
-.menu a:hover{
-
-    background:rgba(255,255,255,.12);
-
+.menu a i {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
 }
 
-.menu a.active{
-
-    background:white;
-
-    color:#2563eb;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
+/* Hover */
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
-.menu a i{
-
-    font-size:20px;
-    width:25px;
-    text-align:center;
-
-}
-
-/* collapse */
-
-.sidebar.close .menu span{
-
-    display:none;
-
+/* Active */
+.menu a.active {
+    background: white;
+    color: #2563eb;
+    font-weight: 600;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 /* ===========================
    LOGOUT
 =========================== */
 
-.logout{
-
-    margin-top:20px;
-
+.logout a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 18px;
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
 }
 
-.logout a{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:15px;
-
-    border-radius:14px;
-
-    transition:.3s;
-
+.logout a i {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
 }
 
-.logout a:hover{
-
-    background:#ef4444;
-
-}
-
-.logout i{
-
-    font-size:20px;
-    width:25px;
-    text-align:center;
-
-}
-
-.sidebar.close .logout span{
-
-    display:none;
-
+.logout a:hover {
+    background: #ef4444;
 }
 
 /* ===========================
-   TOGGLE BUTTON
+   SIDEBAR OVERLAY (Mobile)
 =========================== */
 
-.toggle{
-
-
-    color:#2563eb;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    cursor:pointer;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
 }
 
-/* ===========================
-   CONTENT
-=========================== */
-
-.main-content{
-
-    margin-left:270px;
-
-    padding:30px;
-
-    transition:.3s;
-
-}
-
-.sidebar.close ~ .main-content{
-
-    margin-left:90px;
-
-}
-
-/* ===========================
-   SCROLL
-=========================== */
-
-.sidebar{
-
-    overflow-y:auto;
-
-}
-
-.sidebar::-webkit-scrollbar{
-
-    width:0px;
-
-}
-
-.sidebar::-webkit-scrollbar-thumb{
-
-    background:#94a3b8;
-
-    border-radius:20px;
-
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
 
-@media(max-width:900px){
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
 
-.sidebar{
-
-    left:-270px;
-
-}
-
-.sidebar.show{
-
-    left:0;
-
-}
-
-.main-content{
-
-    margin-left:0;
-
-}
-
+    .sidebar.show {
+        transform: translateX(0);
+    }
 }

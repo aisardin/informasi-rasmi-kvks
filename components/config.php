@@ -1,7 +1,16 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "irkvks";
 
-$conn = mysqli_connect($host, $username, $password, $database);
+$conn = mysqli_connect(
+    "localhost",
+    "root",
+    "",
+    "irkvks"
+);
+
+if(!$conn){
+
+    die("Database gagal disambungkan.");
+
+}
+
+?>

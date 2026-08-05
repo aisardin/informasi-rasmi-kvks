@@ -1,11 +1,20 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
     const sidebar = document.getElementById("sidebar");
-    const toggle = document.querySelector(".toggle");
+    const toggleBtn = document.getElementById("toggleBtn");
+    const overlay = document.querySelector(".sidebar-overlay");
 
-    toggle.addEventListener("click", function(){
+    toggleBtn.addEventListener("click", function () {
 
-        sidebar.classList.toggle("close");
+        sidebar.classList.toggle("show");
+        overlay.classList.toggle("active");
+
+    });
+
+    overlay.addEventListener("click", function () {
+
+        sidebar.classList.remove("show");
+        overlay.classList.remove("active");
 
     });
 

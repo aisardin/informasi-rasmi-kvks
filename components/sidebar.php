@@ -1,208 +1,113 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<aside class="sidebar" id="sidebar">
 
+    <!-- ======================
+            LOGO
+    ======================= -->
 
-<div class="sidebar" id="sidebar">
-
-    <!-- Logo -->
-    <div class="logo-section">
+    <div>
 
         <div class="logo">
 
-            <img src="../../asset/images/logo kv.png" alt="Logo" class="toggle">
+            <img src="<?= $baseUrl ?>asset/images/logo.png"
+                 class="logo-img"
+                 alt="IR-KVKS">
 
             <div class="logo-text">
+
                 <h2>IR-KVKS</h2>
-                <p>Sistem Perkongsian Maklumat</p>
+
+                <span>Sistem Perkongsian Maklumat</span>
+
             </div>
 
         </div>
 
-    </div>
+        <!-- ======================
+                MENU
+        ======================= -->
 
-    <!-- Menu -->
-    <div class="menu">
+        <nav class="menu">
 
-<?php
+            <a href="<?= $baseUrl ?>pages/pelajar/dashboard.php"
+               class="<?= $currentPage=="dashboard.php" ? "active":"";?>">
 
-if($_SESSION['role']=="pelajar"){
+                <i class="fa-solid fa-house"></i>
 
-?>
+                <span>Dashboard</span>
 
-<a href="dashboard-pelajar.php"
-class="<?=($currentPage=="dashboard-pelajar.php")?'active':'';?>">
+            </a>
 
-<i class="fa-solid fa-house"></i>
+            <a href="#">
 
-<span>Dashboard</span>
+                <i class="fa-solid fa-bullhorn"></i>
 
-</a>
+                <span>Pengumuman</span>
 
-<a href="pengumuman.php">
+            </a>
 
-<i class="fa-solid fa-bullhorn"></i>
+            <a href="#">
 
-<span>Pengumuman</span>
+                <i class="fa-solid fa-book"></i>
 
-</a>
+                <span>Akademik</span>
 
-<a href="jadual.php">
+            </a>
 
-<i class="fa-solid fa-calendar-days"></i>
+            <a href="#">
 
-<span>Jadual & Takwim</span>
+                <i class="fa-solid fa-calendar-days"></i>
 
-</a>
+                <span>Aktiviti</span>
 
-<a href="bahan.php">
+            </a>
 
-<i class="fa-solid fa-book-open"></i>
+            <a href="#">
 
-<span>Bahan Pembelajaran</span>
+                <i class="fa-solid fa-folder"></i>
 
-</a>
+                <span>Dokumen</span>
 
-<a href="tugasan.php">
+            </a>
 
-<i class="fa-solid fa-file-circle-check"></i>
+            <a href="#">
 
-<span>Tugasan Saya</span>
+                <i class="fa-solid fa-comments"></i>
 
-</a>
+                <span>Forum</span>
 
-<a href="komunikasi.php">
+            </a>
 
-<i class="fa-solid fa-comments"></i>
+            <a href="#">
 
-<span>Komunikasi</span>
+                <i class="fa-solid fa-user"></i>
 
-</a>
+                <span>Profil</span>
 
-<a href="aktiviti.php">
+            </a>
 
-<i class="fa-solid fa-calendar-check"></i>
+            <a href="#">
 
-<span>Aktiviti</span>
+                <i class="fa-solid fa-gear"></i>
 
-</a>
+                <span>Tetapan</span>
 
-<a href="profil.php">
+            </a>
 
-<i class="fa-solid fa-user"></i>
-
-<span>Profil</span>
-
-</a>
-
-<a href="tetapan.php">
-
-<i class="fa-solid fa-gear"></i>
-
-<span>Tetapan</span>
-
-</a>
-
-<?php
-
-}else{
-
-?>
-
-<a href="dashboard-pensyarah.php"
-class="<?=($currentPage=="dashboard-pensyarah.php")?'active':'';?>">
-
-<i class="fa-solid fa-house"></i>
-
-<span>Dashboard</span>
-
-</a>
-
-<a href="pengumuman.php">
-
-<i class="fa-solid fa-bullhorn"></i>
-
-<span>Pengurusan Pengumuman</span>
-
-</a>
-
-<a href="bahan.php">
-
-<i class="fa-solid fa-book-open"></i>
-
-<span>Bahan Pembelajaran</span>
-
-</a>
-
-<a href="pelajar.php">
-
-<i class="fa-solid fa-user-graduate"></i>
-
-<span>Pengurusan Pelajar</span>
-
-</a>
-
-<a href="tugasan.php">
-
-<i class="fa-solid fa-file-circle-check"></i>
-
-<span>Tugasan</span>
-
-</a>
-
-<a href="jadual.php">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-<span>Jadual</span>
-
-</a>
-
-<a href="komunikasi.php">
-
-<i class="fa-solid fa-comments"></i>
-
-<span>Komunikasi</span>
-
-</a>
-
-<a href="profil.php">
-
-<i class="fa-solid fa-user"></i>
-
-<span>Profil</span>
-
-</a>
-
-<a href="tetapan.php">
-
-<i class="fa-solid fa-gear"></i>
-
-<span>Tetapan</span>
-
-</a>
-
-<?php
-
-}
-
-?>
+        </nav>
 
     </div>
 
-    <!-- Logout -->
+    <!-- ======================
+            LOGOUT
+    ======================= -->
 
-    <div class="logout" onclick="return confirm('anda pasti ingin keluar?')">
+    <div class="logout">
 
-        <a href="../../auth/logout.php">
+        <a href="<?= $baseUrl ?>auth/logout.php">
 
             <i class="fa-solid fa-right-from-bracket"></i>
 
@@ -212,4 +117,4 @@ class="<?=($currentPage=="dashboard-pensyarah.php")?'active':'';?>">
 
     </div>
 
-</div>
+</aside>
