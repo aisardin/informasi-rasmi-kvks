@@ -33,7 +33,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <nav class="menu">
 
             <a href="<?= $baseUrl ?>pages/pelajar/dashboard.php"
-               class="<?= $currentPage=="dashboard.php" ? "active":"";?>">
+                class="<?= $currentPage=="dashboard.php" ? "active":"";?>">
 
                 <i class="fa-solid fa-house"></i>
 
@@ -41,7 +41,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
             </a>
 
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/pengumuman.php"
+                class="<?= $currentPage=="pengumuman.php" ? "active":"";?>">
 
                 <i class="fa-solid fa-bullhorn"></i>
 
@@ -49,7 +50,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
             </a>
 
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/akademik.php"
+                class="<?= $currentPage=="akademik.php" ? "active":"";?>">
 
                 <i class="fa-solid fa-book"></i>
 
@@ -57,7 +59,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
             </a>
 
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/aktiviti.php"
+                class="<?= $currentPage=="aktiviti.php" ? "active":"";?>">
 
                 <i class="fa-solid fa-calendar-days"></i>
 
@@ -65,23 +68,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
             </a>
 
-            <a href="#">
-
-                <i class="fa-solid fa-folder"></i>
-
-                <span>Dokumen</span>
-
-            </a>
-
-            <a href="#">
-
-                <i class="fa-solid fa-comments"></i>
-
-                <span>Forum</span>
-
-            </a>
-
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/profil.php"
+                class="<?= $currentPage=="profil.php" ? "active":"";?>">
 
                 <i class="fa-solid fa-user"></i>
 

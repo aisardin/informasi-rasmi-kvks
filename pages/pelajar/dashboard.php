@@ -173,79 +173,145 @@ $resultBahan = mysqli_stmt_get_result($stmtBahan);
 // QUERY KALENDAR
 // =====================================
 
-$queryCalendar = "
-
-SELECT 
-    tajuk AS title,
-    tarikh AS start,
-    'Aktiviti' AS jenis
-
-FROM aktiviti
-
-WHERE status='aktif'
-
-
-UNION ALL
-
-
-SELECT
-
-    tajuk AS title,
-    tarikh_akhir AS start,
-    'Tugasan' AS jenis
-
-FROM tugasan t
-
-INNER JOIN kelas k
-ON t.kelas_id = k.id
-
-
-INNER JOIN kelas_pelajar kp
-ON k.id = kp.kelas_id
-
-
-WHERE kp.pelajar_id = ?
-
+// AKTIVITI
+$queryCalendarAktiviti = "
+    SELECT
+        id,
+        nama_aktiviti AS title,
+        tarikh,
+        masa,
+        lokasi
+    FROM aktiviti
+    WHERE status = 'aktif'
+    AND tarikh >= CURDATE()
+    ORDER BY tarikh ASC
 ";
 
+$resultCalendarAktiviti = mysqli_query($conn, $queryCalendarAktiviti);
 
-$stmtCalendar = mysqli_prepare($conn,$queryCalendar);
 
+// TUGASAN
+$queryCalendarTugasan = "
+    SELECT
+        t.id,
+        t.tajuk AS title,
+        t.tarikh_akhir,
+        k.nama_kelas
+    FROM tugasan t
+
+    INNER JOIN kelas k
+        ON t.kelas_id = k.id
+
+    INNER JOIN kelas_pelajar kp
+        ON k.id = kp.kelas_id
+
+    WHERE kp.pelajar_id = ?
+    AND t.status = 'aktif'
+    AND t.tarikh_akhir >= NOW()
+
+    ORDER BY t.tarikh_akhir ASC
+";
+
+$stmtCalendarTugasan = mysqli_prepare(
+    $conn,
+    $queryCalendarTugasan
+);
+
+if (!$stmtCalendarTugasan) {
+    die("Error Query Tugasan Calendar: " . mysqli_error($conn));
+}
 
 mysqli_stmt_bind_param(
-    $stmtCalendar,
+    $stmtCalendarTugasan,
     "i",
     $userId
 );
 
+mysqli_stmt_execute($stmtCalendarTugasan);
 
-mysqli_stmt_execute($stmtCalendar);
-
-
-$resultCalendar = mysqli_stmt_get_result($stmtCalendar);
-
+$resultCalendarTugasan =
+    mysqli_stmt_get_result($stmtCalendarTugasan);
 
 
-$events=[];
+// =====================================
+// GABUNGKAN EVENT
+// =====================================
+
+$events = [];
 
 
-while($row=mysqli_fetch_assoc($resultCalendar)){
+// -----------------------------
+// AKTIVITI
+// -----------------------------
 
+if ($resultCalendarAktiviti) {
 
-    $events[]=[
+    while ($row = mysqli_fetch_assoc($resultCalendarAktiviti)) {
 
-        "title"=>$row['title'],
+        $startDate = $row['tarikh'];
 
-        "start"=>$row['start']
+        // Jika masa ada, gabungkan tarikh + masa
+        if (!empty($row['masa'])) {
+            $startDate .= 'T' . $row['masa'];
+        }
 
-    ];
+        $events[] = [
 
+            "title" =>
+                "Aktiviti: " .
+                $row['title'],
 
+            "start" =>
+                $startDate,
+
+            "jenis" =>
+                "aktiviti",
+
+            "lokasi" =>
+                $row['lokasi']
+
+        ];
+    }
 }
 
 
-$calendarData=json_encode($events);
+// -----------------------------
+// TUGASAN
+// -----------------------------
 
+if ($resultCalendarTugasan) {
+
+    while ($row = mysqli_fetch_assoc(
+        $resultCalendarTugasan
+    )) {
+
+        $events[] = [
+
+            "title" =>
+                "Tugasan: " .
+                $row['title'],
+
+            "start" =>
+                $row['tarikh_akhir'],
+
+            "jenis" =>
+                "tugasan",
+
+            "lokasi" =>
+                "",
+
+            "kelas" =>
+                $row['nama_kelas']
+
+        ];
+    }
+}
+
+
+$calendarData = json_encode(
+    $events,
+    JSON_UNESCAPED_UNICODE
+);
 // Header
 include("../../components/header.php");
 
@@ -387,7 +453,7 @@ include("../../components/sidebar.php");
         <div class="card-header">
             <h3>Pengumuman Terkini</h3>
 
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/pengumuman.php">
                 Lihat Semua
             </a>
 

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="<?= $baseUrl ?>asset/css/sidebar.css">
     <link rel="stylesheet" href="<?= $baseUrl?>asset/css/topbar.css">
     <link rel="stylesheet" href="<?= $baseUrl?>asset/css/dashboard.css">
+<?php if(isset($pageCss)){ ?>
+<link rel="stylesheet" href="<?= $baseUrl ?>asset/css/<?= $pageCss ?>">
+<?php } ?>
 
     <script src="<?= $baseUrl ?>asset/js/sidebar.js"></script>
     <script src="<?= $baseUrl ?>asset/js/login.js"></script>
