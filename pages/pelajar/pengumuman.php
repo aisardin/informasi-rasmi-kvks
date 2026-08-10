@@ -71,39 +71,39 @@ include("../../components/sidebar.php");
             <?php while($row=mysqli_fetch_assoc($resultPengumuman)): ?>
 
                 <div class="announcement-card">
-<div class="announcement-header">
+                    <div class="announcement-header">
 
-    <div class="announcement-title">
+                        <div class="announcement-title">
 
-        <div class="announcement-icon">
-            <i class="fa-solid fa-bullhorn"></i>
-        </div>
+                            <div class="announcement-icon">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
 
-        <div>
+                            <div>
 
-            <h3><?= htmlspecialchars($row['tajuk']) ?></h3>
+                                <h3><?= htmlspecialchars($row['tajuk']) ?></h3>
 
-            <span class="announcement-date">
-                <?= date("d M Y", strtotime($row['tarikh_cipta'])) ?>
-            </span>
+                                <span class="announcement-date">
+                                    <?= date("d M Y", strtotime($row['tarikh_cipta'])) ?>
+                                </span>
 
-        </div>
+                            </div>
 
-    </div>
+                        </div>
 
-</div>
+                    </div>
 
-<p>
-    <?= nl2br(htmlspecialchars($row['kandungan'])) ?>
-</p>
+                    <p>
+                        <?= nl2br(htmlspecialchars($row['kandungan'])) ?>
+                    </p>
 
-<div class="announcement-footer">
+                    <div class="announcement-footer">
 
-    <span class="badge">
-        <?= ucfirst($row['sasaran']) ?>
-    </span>
+                        <span class="badge">
+                            <?= ucfirst($row['sasaran']) ?>
+                        </span>
 
-</div>
+                    </div>
 
                 </div>
 

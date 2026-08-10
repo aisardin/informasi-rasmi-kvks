@@ -1,0 +1,791 @@
+/* =========================================================
+   IR-KVKS ADMIN TOPBAR
+   ========================================================= */
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+.admin-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5eaf1;
+
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   LEFT
+   ========================================================= */
+
+.admin-topbar-left {
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.admin-menu-btn {
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(37, 99, 235, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.admin-menu-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.28);
+
+}
+
+
+.admin-menu-btn:active {
+
+    transform: scale(0.96);
+
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.admin-search {
+
+    width: 420px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 20px;
+
+    background: #f1f5f9;
+
+    border: 1px solid transparent;
+
+    border-radius: 16px;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.admin-search i {
+
+    color: #64748b;
+
+    font-size: 19px;
+
+}
+
+
+.admin-search input {
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+}
+
+
+.admin-search input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+.admin-search:focus-within {
+
+    background: #ffffff;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.08);
+
+}
+
+
+.admin-search:focus-within i {
+
+    color: #2563eb;
+
+}
+
+
+/* =========================================================
+   RIGHT
+   ========================================================= */
+
+.admin-topbar-right {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+/* =========================================================
+   ICON BUTTON
+   ========================================================= */
+
+.admin-topbar-icon {
+
+    width: 54px;
+    height: 54px;
+
+    border: 1px solid transparent;
+
+    border-radius: 15px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
+
+}
+
+
+.admin-topbar-icon:hover {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #dbeafe;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   NOTIFICATION BADGE
+   ========================================================= */
+
+.notification-badge {
+
+    position: absolute;
+
+    top: -5px;
+    right: -4px;
+
+    min-width: 23px;
+    height: 23px;
+
+    padding: 0 6px;
+
+    border-radius: 50px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    border: 2px solid #ffffff;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   ADMIN PROFILE
+   ========================================================= */
+
+.admin-profile {
+
+    min-width: 245px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 7px 16px;
+
+    background: #f1f5f9;
+
+    border: 1px solid transparent;
+
+    border-radius: 17px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.admin-profile:hover {
+
+    background: #ffffff;
+
+    border-color: #dbeafe;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.07);
+
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.admin-profile-image {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 3px solid #2563eb;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.admin-profile-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.admin-profile-placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   PROFILE INFO
+   ========================================================= */
+
+.admin-profile-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.admin-profile-info strong {
+
+    color: #172033;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.admin-profile-info span {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   PROFILE ARROW
+   ========================================================= */
+
+.admin-profile-arrow {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.admin-profile:hover .admin-profile-arrow {
+
+    color: #2563eb;
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .admin-topbar {
+
+    background:
+        linear-gradient(
+            135deg,
+            #101827,
+            #142238
+        );
+
+    border-bottom-color: #263852;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.20);
+
+}
+
+
+body.dark-mode .admin-search {
+
+    background: #18253a;
+
+    border-color: #273a55;
+
+}
+
+
+body.dark-mode .admin-search input {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode .admin-search input::placeholder {
+
+    color: #8294ad;
+
+}
+
+
+body.dark-mode .admin-search i {
+
+    color: #8fa2bc;
+
+}
+
+
+body.dark-mode .admin-search:focus-within {
+
+    background: #1c2b42;
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.12);
+
+}
+
+
+body.dark-mode .admin-topbar-icon {
+
+    background: #18253a;
+
+    border-color: #273a55;
+
+    color: #b7c5d8;
+
+}
+
+
+body.dark-mode .admin-topbar-icon:hover {
+
+    background: #1e3452;
+
+    border-color: #315783;
+
+    color: #60a5fa;
+
+}
+
+
+body.dark-mode .notification-badge {
+
+    border-color: #101827;
+
+}
+
+
+body.dark-mode .admin-profile {
+
+    background: #18253a;
+
+    border-color: #273a55;
+
+}
+
+
+body.dark-mode .admin-profile:hover {
+
+    background: #1e2e46;
+
+    border-color: #315783;
+
+}
+
+
+body.dark-mode .admin-profile-info strong {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode .admin-profile-info span {
+
+    color: #9fb1c8;
+
+}
+
+
+body.dark-mode .admin-profile-arrow {
+
+    color: #9fb1c8;
+
+}
+
+
+body.dark-mode .admin-profile:hover .admin-profile-arrow {
+
+    color: #60a5fa;
+
+}
+
+
+body.dark-mode .admin-profile-image {
+
+    background: #172c49;
+
+    border-color: #3b82f6;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .admin-search {
+
+        width: 300px;
+
+    }
+
+    .admin-profile {
+
+        min-width: 210px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .admin-topbar {
+
+        height: 76px;
+
+        padding: 0 18px;
+
+    }
+
+
+    .admin-topbar-left {
+
+        gap: 14px;
+
+    }
+
+
+    .admin-search {
+
+        width: 240px;
+        height: 50px;
+
+    }
+
+
+    .admin-menu-btn,
+    .admin-topbar-icon {
+
+        width: 48px;
+        height: 48px;
+
+    }
+
+
+    .admin-profile {
+
+        min-width: auto;
+
+        width: 50px;
+        height: 50px;
+
+        padding: 3px;
+
+        border-radius: 50%;
+
+        justify-content: center;
+
+    }
+
+
+    .admin-profile-info,
+    .admin-profile-arrow {
+
+        display: none;
+
+    }
+
+
+    .admin-profile-image {
+
+        width: 42px;
+        height: 42px;
+
+        border-width: 2px;
+
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .admin-search {
+
+        width: 50px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 14px;
+
+    }
+
+
+    .admin-search input {
+
+        display: none;
+
+    }
+
+
+    .admin-search i {
+
+        font-size: 18px;
+
+    }
+
+
+    .admin-topbar-right {
+
+        gap: 7px;
+
+    }
+
+
+    .admin-topbar-icon {
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 17px;
+
+    }
+
+
+    .admin-menu-btn {
+
+        width: 44px;
+        height: 44px;
+
+    }
+
+}
+.admin-toggle-btn {
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.admin-toggle-btn:hover {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    transform: translateY(-1px);
+
+}

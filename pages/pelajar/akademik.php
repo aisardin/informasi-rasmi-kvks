@@ -89,6 +89,7 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
 // Header
+$pageCss = "akademik.css";
 include("../../components/header.php");
 
 // Sidebar

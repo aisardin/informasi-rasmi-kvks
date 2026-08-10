@@ -1,0 +1,1125 @@
+/* =========================================================
+   IR-KVKS ADMIN - PENGUMUMAN
+========================================================= */
+
+:root {
+
+    /* Background */
+    --announcement-bg: #f4f7fb;
+    --announcement-card: #ffffff;
+    --announcement-soft: #f8fafc;
+
+    /* Text */
+    --announcement-heading: #172033;
+    --announcement-text: #334155;
+    --announcement-secondary: #64748b;
+    --announcement-muted: #94a3b8;
+
+    /* Border */
+    --announcement-border: #e2e8f0;
+
+    /* Blue */
+    --announcement-blue: #2563eb;
+    --announcement-blue-light: #eff6ff;
+    --announcement-blue-hover: #1d4ed8;
+
+    /* Green */
+    --announcement-green: #10b981;
+    --announcement-green-light: #ecfdf5;
+
+    /* Red */
+    --announcement-red: #ef4444;
+    --announcement-red-light: #fef2f2;
+
+    /* Shadow */
+    --announcement-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.06);
+
+    --announcement-shadow-hover:
+        0 14px 35px rgba(15, 23, 42, 0.10);
+
+    /* Radius */
+    --announcement-radius: 18px;
+}
+
+
+/* =========================================================
+   FULL SCREEN ADMIN LAYOUT
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: var(--announcement-bg);
+    color: var(--announcement-text);
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ADMIN MAIN
+========================================================= */
+
+.admin-main {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+
+    background: var(--announcement-bg);
+
+    box-sizing: border-box;
+
+    transition:
+        background-color .3s ease;
+}
+
+
+/* =========================================================
+   CONTENT AREA
+========================================================= */
+
+.admin-content {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px 35px 25px;
+
+}
+
+
+.page-header h1 {
+
+    margin: 10px 0 7px;
+
+    color: var(--announcement-heading);
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: var(--announcement-secondary);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   PAGE BADGE
+========================================================= */
+
+.page-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 9px;
+
+    background: var(--announcement-blue-light);
+
+    color: var(--announcement-blue);
+
+    border: 1px solid rgba(37, 99, 235, .12);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+}
+
+
+.page-badge i {
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 44px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--announcement-blue);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, .18);
+
+    transition: all .25s ease;
+
+}
+
+
+.add-btn i {
+
+    font-size: 13px;
+
+}
+
+
+.add-btn:hover {
+
+    background: var(--announcement-blue-hover);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, .25);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.announcement-content {
+
+    padding: 0 35px 40px;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    margin-bottom: 22px;
+
+    box-sizing: border-box;
+
+    background: var(--announcement-card);
+
+    border: 1px solid var(--announcement-border);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, .03);
+
+    transition: all .25s ease;
+
+}
+
+
+.search-box:focus-within {
+
+    border-color: var(--announcement-blue);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .10);
+
+}
+
+
+.search-box i {
+
+    color: var(--announcement-muted);
+
+    font-size: 15px;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--announcement-text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+}
+
+
+.search-box input::placeholder {
+
+    color: var(--announcement-muted);
+
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT CARD
+========================================================= */
+
+.announcement-card {
+
+    width: 100%;
+
+    background: var(--announcement-card);
+
+    border: 1px solid var(--announcement-border);
+
+    border-radius: var(--announcement-radius);
+
+    box-shadow: var(--announcement-shadow);
+
+    overflow: hidden;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.announcement-card:hover {
+
+    box-shadow: var(--announcement-shadow-hover);
+
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid var(--announcement-border);
+
+}
+
+
+.table-header h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--announcement-heading);
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+}
+
+
+.table-header p {
+
+    margin: 0;
+
+    color: var(--announcement-secondary);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+#announcementTable {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+
+}
+
+
+/* =========================================================
+   TABLE HEAD
+========================================================= */
+
+#announcementTable thead {
+
+    background: var(--announcement-soft);
+
+}
+
+
+#announcementTable th {
+
+    padding: 15px 18px;
+
+    color: var(--announcement-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .4px;
+
+    border-bottom: 1px solid var(--announcement-border);
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+#announcementTable td {
+
+    padding: 17px 18px;
+
+    color: var(--announcement-text);
+
+    font-size: 13px;
+
+    border-bottom: 1px solid var(--announcement-border);
+
+    vertical-align: middle;
+
+}
+
+
+#announcementTable tbody tr {
+
+    transition:
+        background-color .2s ease;
+
+}
+
+
+#announcementTable tbody tr:hover {
+
+    background: var(--announcement-soft);
+
+}
+
+
+#announcementTable tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT TITLE
+========================================================= */
+
+.announcement-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 220px;
+
+}
+
+
+.announcement-title strong {
+
+    color: var(--announcement-heading);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT ICON
+========================================================= */
+
+.announcement-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--announcement-blue-light);
+
+    color: var(--announcement-blue);
+
+}
+
+
+.announcement-icon i {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+
+    display: block;
+
+    max-width: 300px;
+
+    color: var(--announcement-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--announcement-secondary);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+}
+
+
+.date i {
+
+    color: var(--announcement-blue);
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+
+}
+
+
+.status.active {
+
+    background: var(--announcement-green-light);
+
+    color: var(--announcement-green);
+
+}
+
+
+.status.inactive {
+
+    background: var(--announcement-red-light);
+
+    color: var(--announcement-red);
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.action-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    transition: all .2s ease;
+
+}
+
+
+.action-btn i {
+
+    font-size: 12px;
+
+}
+
+
+/* EDIT */
+
+.action-btn.edit {
+
+    background: var(--announcement-blue-light);
+
+    color: var(--announcement-blue);
+
+}
+
+
+.action-btn.edit:hover {
+
+    background: var(--announcement-blue);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* DELETE */
+
+.action-btn.delete {
+
+    background: var(--announcement-red-light);
+
+    color: var(--announcement-red);
+
+}
+
+
+.action-btn.delete:hover {
+
+    background: var(--announcement-red);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   EMPTY TABLE
+========================================================= */
+
+.empty-table {
+
+    padding: 70px 20px !important;
+
+    text-align: center !important;
+
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: var(--announcement-blue-light);
+
+    color: var(--announcement-blue);
+
+}
+
+
+.empty-icon i {
+
+    font-size: 24px;
+
+}
+
+
+.empty-table h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--announcement-heading);
+
+    font-size: 17px;
+
+}
+
+
+.empty-table p {
+
+    margin: 0 0 20px;
+
+    color: var(--announcement-secondary);
+
+    font-size: 13px;
+
+}
+
+
+.empty-table .add-btn {
+
+    display: inline-flex;
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --announcement-bg: #0b1220;
+
+    --announcement-card: #151f32;
+
+    --announcement-soft: #1a263a;
+
+    --announcement-heading: #f8fafc;
+
+    --announcement-text: #e5edf8;
+
+    --announcement-secondary: #a9b8cc;
+
+    --announcement-muted: #7f91aa;
+
+    --announcement-border: #2a3a52;
+
+    --announcement-blue: #3b82f6;
+
+    --announcement-blue-light: rgba(59, 130, 246, .14);
+
+    --announcement-blue-hover: #60a5fa;
+
+    --announcement-green: #34d399;
+
+    --announcement-green-light: rgba(52, 211, 153, .12);
+
+    --announcement-red: #f87171;
+
+    --announcement-red-light: rgba(248, 113, 113, .12);
+
+    --announcement-shadow:
+        0 10px 35px rgba(0, 0, 0, .25);
+
+    --announcement-shadow-hover:
+        0 15px 40px rgba(0, 0, 0, .35);
+
+}
+
+
+/* =========================================================
+   DARK - SEARCH
+========================================================= */
+
+body.dark-mode .search-box {
+
+    background: #151f32;
+
+    border-color: #2a3a52;
+
+}
+
+
+body.dark-mode .search-box:focus-within {
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, .12);
+
+}
+
+
+/* =========================================================
+   DARK - TABLE
+========================================================= */
+
+body.dark-mode #announcementTable thead {
+
+    background: #1a263a;
+
+}
+
+
+body.dark-mode #announcementTable tbody tr:hover {
+
+    background: #1a263a;
+
+}
+
+
+/* =========================================================
+   DARK - ICON
+========================================================= */
+
+body.dark-mode .announcement-icon {
+
+    background: rgba(59, 130, 246, .14);
+
+    color: #60a5fa;
+
+}
+
+
+/* =========================================================
+   DARK - STATUS
+========================================================= */
+
+body.dark-mode .status.active {
+
+    background: rgba(52, 211, 153, .12);
+
+    color: #34d399;
+
+}
+
+
+body.dark-mode .status.inactive {
+
+    background: rgba(248, 113, 113, .12);
+
+    color: #f87171;
+
+}
+
+
+/* =========================================================
+   DARK - ACTION
+========================================================= */
+
+body.dark-mode .action-btn.edit {
+
+    background: rgba(59, 130, 246, .14);
+
+    color: #60a5fa;
+
+}
+
+
+body.dark-mode .action-btn.edit:hover {
+
+    background: #3b82f6;
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .action-btn.delete {
+
+    background: rgba(248, 113, 113, .12);
+
+    color: #f87171;
+
+}
+
+
+body.dark-mode .action-btn.delete:hover {
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   DARK - EMPTY
+========================================================= */
+
+body.dark-mode .empty-icon {
+
+    background: rgba(59, 130, 246, .14);
+
+    color: #60a5fa;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .page-header {
+
+        padding: 25px;
+
+    }
+
+
+    .announcement-content {
+
+        padding: 0 25px 35px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .page-header .add-btn {
+
+        width: 100%;
+
+    }
+
+
+    .announcement-content {
+
+        padding: 0 18px 30px;
+
+    }
+
+
+    .search-box {
+
+        max-width: none;
+
+    }
+
+
+    .table-header {
+
+        padding: 18px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header {
+
+        padding: 20px 16px;
+
+    }
+
+
+    .announcement-content {
+
+        padding: 0 16px 25px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .page-badge {
+
+        font-size: 11px;
+
+    }
+
+
+    .table-header h2 {
+
+        font-size: 15px;
+
+    }
+
+}
+

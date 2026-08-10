@@ -1,0 +1,867 @@
+/* =================================================
+   AKADEMIK PAGE
+================================================= */
+
+.academic-content {
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/* =================================================
+   SEARCH BOX
+================================================= */
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 13px 16px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+
+    transition: 0.2s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+.search-box i {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    color: #1e293b;
+}
+
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+
+
+/* =================================================
+   ACADEMIC CARD
+================================================= */
+
+.academic-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+
+/* =================================================
+   TABLE HEADER
+================================================= */
+
+.academic-card .table-header {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+
+.academic-card .table-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+}
+
+
+.academic-card .table-header p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+
+/* =================================================
+   TOTAL BADGE
+================================================= */
+
+.total-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   TABLE CONTAINER
+================================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.table-container::-webkit-scrollbar {
+    height: 7px;
+}
+
+
+.table-container::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+
+/* =================================================
+   TABLE
+================================================= */
+
+#academicTable {
+    width: 100%;
+
+    min-width: 1150px;
+
+    border-collapse: collapse;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/* =================================================
+   TABLE HEAD
+================================================= */
+
+#academicTable thead {
+    background: #f8fafc;
+}
+
+
+#academicTable thead th {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #64748b;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   TABLE BODY
+================================================= */
+
+#academicTable tbody tr {
+    transition: background 0.2s ease;
+}
+
+
+#academicTable tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+#academicTable tbody td {
+    padding: 17px 16px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+}
+
+
+#academicTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* =================================================
+   ROW NUMBER
+================================================= */
+
+.row-number {
+    width: 30px;
+
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+
+/* =================================================
+   ACADEMIC TITLE
+================================================= */
+
+.academic-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 210px;
+}
+
+
+.academic-icon {
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 16px;
+}
+
+
+.academic-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+
+.academic-info strong {
+    color: #1e293b;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+.academic-info small {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+
+/* =================================================
+   KOD SUBJEK
+================================================= */
+
+.class-code {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    font-family: monospace;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   PROGRAM
+================================================= */
+
+.program-text {
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    max-width: 180px;
+
+    display: inline-block;
+}
+
+
+
+/* =================================================
+   PENSYARAH
+================================================= */
+
+.lecturer-name {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.lecturer-name i {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+
+/* =================================================
+   SEMESTER
+================================================= */
+
+.semester-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 32px;
+
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background: #f5f3ff;
+
+    color: #7c3aed;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+
+/* =================================================
+   SESI
+================================================= */
+
+.session-text {
+    color: #64748b;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   HARI
+================================================= */
+
+.day-text {
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   MASA
+================================================= */
+
+.class-time {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    white-space: nowrap;
+}
+
+
+.class-time span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #475569;
+
+    font-size: 11px;
+}
+
+
+.class-time i {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+
+/* =================================================
+   LOKASI
+================================================= */
+
+.academic-location {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    max-width: 150px;
+
+    line-height: 1.4;
+}
+
+
+.academic-location i {
+    color: #64748b;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+}
+
+
+
+/* =================================================
+   STATUS
+================================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.status-dot {
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+
+/* AKTIF */
+
+.status.active {
+    background: #ecfdf5;
+
+    color: #059669;
+}
+
+
+
+/* TIDAK AKTIF */
+
+.status.inactive {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+
+
+/* =================================================
+   ACTION BUTTONS
+================================================= */
+
+.action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.action-btn {
+    width: 34px;
+
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+    font-size: 13px;
+}
+
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+
+/* EDIT */
+
+.action-btn.edit {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+.action-btn.edit:hover {
+    background: #dbeafe;
+}
+
+
+
+/* DELETE */
+
+.action-btn.delete {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+
+.action-btn.delete:hover {
+    background: #fee2e2;
+}
+
+
+
+/* =================================================
+   EMPTY TABLE
+================================================= */
+
+.empty-table {
+    text-align: center !important;
+
+    padding: 70px 20px !important;
+
+    color: #64748b;
+}
+
+
+.empty-icon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #f1f5f9;
+
+    color: #94a3b8;
+
+    font-size: 25px;
+}
+
+
+.empty-table h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 16px;
+}
+
+
+.empty-table p {
+    margin: 0 0 20px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+
+/* =================================================
+   ADD BUTTON
+================================================= */
+
+.add-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.add-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 900px) {
+
+    .academic-card .table-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 18px;
+    }
+
+
+    .search-box {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .academic-content {
+        margin-top: 18px;
+    }
+
+
+    .academic-card {
+        border-radius: 12px;
+    }
+
+
+    .academic-card .table-header h2 {
+        font-size: 17px;
+    }
+
+
+    .academic-card .table-header p {
+        font-size: 12px;
+    }
+
+
+    .total-badge {
+        font-size: 11px;
+    }
+
+
+    .page-header {
+        gap: 15px;
+    }
+
+
+    .page-header .add-btn {
+        width: 100%;
+    }
+
+}

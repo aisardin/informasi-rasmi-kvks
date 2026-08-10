@@ -7,6 +7,34 @@ IRKVKS/
 |   |   └── dashboard.php
 │   └── pelajar/
 |       └── dashboard.php
+├── admin/
+│   ├── dashboard.php
+│   │
+│   ├── pengguna/
+│   │   ├── index.php
+│   │   ├── tambah.php
+│   │   ├── edit.php
+│   │   └── padam.php
+│   │
+│   ├── pengumuman/
+│   │   ├── index.php
+│   │   ├── tambah.php
+│   │   ├── edit.php
+│   │   └── padam.php
+│   │
+│   ├── aktiviti/
+│   │   ├── index.php
+│   │   ├── tambah.php
+│   │   ├── edit.php
+│   │   └── padam.php
+│   │
+│   ├── akademik/
+│   │   ├── kelas.php
+│   │   ├── tambah.php
+│   │   └── edit.php
+│   │
+│   ├── profil.php
+│   └── tetapan.php
 │
 │
 ├── components/

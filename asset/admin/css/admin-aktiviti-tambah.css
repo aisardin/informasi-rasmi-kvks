@@ -1,0 +1,963 @@
+/* =========================================================
+   IR-KVKS ADMIN - AKTIVITI FORM
+========================================================= */
+
+:root {
+
+    --form-bg: #f4f7fb;
+    --form-card: #ffffff;
+    --form-soft: #f8fafc;
+
+    --form-heading: #172033;
+    --form-text: #334155;
+    --form-secondary: #64748b;
+    --form-muted: #94a3b8;
+
+    --form-border: #e2e8f0;
+
+    --form-blue: #2563eb;
+    --form-blue-light: #eff6ff;
+    --form-blue-hover: #1d4ed8;
+
+    --form-red: #ef4444;
+    --form-red-light: #fef2f2;
+
+    --form-shadow:
+        0 8px 30px rgba(15, 23, 42, .06);
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    background:
+        var(--form-bg);
+
+    color:
+        var(--form-text);
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.admin-main {
+
+    min-height: 100vh;
+
+    background:
+        var(--form-bg);
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        30px 35px 25px;
+
+}
+
+
+.page-header h1 {
+
+    margin:
+        10px 0 7px;
+
+    color:
+        var(--form-heading);
+
+    font-size:
+        30px;
+
+    font-weight:
+        750;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color:
+        var(--form-secondary);
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.page-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--form-blue-light);
+
+    color:
+        var(--form-blue);
+
+    font-size:
+        12px;
+
+    font-weight:
+        650;
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding:
+        0 17px;
+
+    border:
+        1px solid
+        var(--form-border);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--form-card);
+
+    color:
+        var(--form-text);
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.back-btn:hover {
+
+    border-color:
+        var(--form-blue);
+
+    color:
+        var(--form-blue);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.activity-form-content {
+
+    padding:
+        0 35px 45px;
+
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.form-alert {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom:
+        20px;
+
+    padding:
+        15px 18px;
+
+    border-radius:
+        12px;
+
+    font-size:
+        13px;
+
+}
+
+
+.form-alert.error {
+
+    background:
+        var(--form-red-light);
+
+    color:
+        var(--form-red);
+
+    border:
+        1px solid
+        rgba(239, 68, 68, .15);
+
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.activity-form-card {
+
+    width: 100%;
+
+    max-width:
+        1100px;
+
+    margin:
+        0 auto;
+
+    background:
+        var(--form-card);
+
+    border:
+        1px solid
+        var(--form-border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--form-shadow);
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        25px 28px;
+
+    border-bottom:
+        1px solid
+        var(--form-border);
+
+}
+
+
+.form-header-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius:
+        13px;
+
+    background:
+        var(--form-blue-light);
+
+    color:
+        var(--form-blue);
+
+}
+
+
+.form-header-icon i {
+
+    font-size:
+        18px;
+
+}
+
+
+.form-card-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--form-heading);
+
+    font-size:
+        18px;
+
+}
+
+
+.form-card-header p {
+
+    margin: 0;
+
+    color:
+        var(--form-secondary);
+
+    font-size:
+        12px;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.activity-form {
+
+    padding:
+        30px;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--form-heading);
+
+    font-size:
+        13px;
+
+    font-weight:
+        650;
+
+}
+
+
+.form-group label span {
+
+    color:
+        var(--form-red);
+
+}
+
+
+.form-group small {
+
+    display: block;
+
+    margin-top:
+        7px;
+
+    color:
+        var(--form-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA / SELECT
+========================================================= */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    box-sizing:
+        border-box;
+
+    border:
+        1px solid
+        var(--form-border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--form-card);
+
+    color:
+        var(--form-text);
+
+    font-family:
+        inherit;
+
+    font-size:
+        13px;
+
+    outline:
+        none;
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.form-group input {
+
+    height:
+        47px;
+
+    padding:
+        0 14px;
+
+}
+
+
+.form-group textarea {
+
+    min-height:
+        150px;
+
+    padding:
+        13px 14px;
+
+    resize:
+        vertical;
+
+}
+
+
+.form-group select {
+
+    height:
+        47px;
+
+    padding:
+        0 14px;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color:
+        var(--form-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .09);
+
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        20px;
+
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+
+    position:
+        relative;
+
+}
+
+
+.input-icon > i {
+
+    position:
+        absolute;
+
+    left:
+        14px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--form-muted);
+
+    font-size:
+        14px;
+
+    z-index:
+        2;
+
+    pointer-events:
+        none;
+
+}
+
+
+.input-icon input,
+.input-icon select {
+
+    padding-left:
+        40px;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.form-info {
+
+    display: flex;
+
+    gap: 13px;
+
+    padding:
+        15px 17px;
+
+    margin:
+        5px 0 25px;
+
+    border:
+        1px solid
+        rgba(37, 99, 235, .12);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--form-blue-light);
+
+    color:
+        var(--form-text);
+
+}
+
+
+.form-info > i {
+
+    color:
+        var(--form-blue);
+
+    margin-top:
+        2px;
+
+}
+
+
+.form-info strong {
+
+    display: block;
+
+    margin-bottom:
+        4px;
+
+    color:
+        var(--form-heading);
+
+    font-size:
+        12px;
+
+}
+
+
+.form-info p {
+
+    margin: 0;
+
+    color:
+        var(--form-secondary);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap:
+        10px;
+
+    padding-top:
+        5px;
+
+}
+
+
+/* CANCEL */
+
+.cancel-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height:
+        44px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        var(--form-border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--form-card);
+
+    color:
+        var(--form-secondary);
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.cancel-btn:hover {
+
+    background:
+        var(--form-soft);
+
+    color:
+        var(--form-heading);
+
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap:
+        8px;
+
+    height:
+        44px;
+
+    padding:
+        0 20px;
+
+    border:
+        none;
+
+    border-radius:
+        11px;
+
+    background:
+        var(--form-blue);
+
+    color:
+        white;
+
+    font-family:
+        inherit;
+
+    font-size:
+        13px;
+
+    font-weight:
+        650;
+
+    cursor:
+        pointer;
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.submit-btn:hover {
+
+    background:
+        var(--form-blue-hover);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, .20);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --form-bg:
+        #0b1220;
+
+    --form-card:
+        #151f32;
+
+    --form-soft:
+        #1a263a;
+
+    --form-heading:
+        #f8fafc;
+
+    --form-text:
+        #e5edf8;
+
+    --form-secondary:
+        #a9b8cc;
+
+    --form-muted:
+        #7f91aa;
+
+    --form-border:
+        #2a3a52;
+
+    --form-blue:
+        #3b82f6;
+
+    --form-blue-light:
+        rgba(59, 130, 246, .14);
+
+    --form-blue-hover:
+        #60a5fa;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        padding:
+            25px;
+
+    }
+
+
+    .page-header .back-btn {
+
+        width:
+            100%;
+
+    }
+
+
+    .activity-form-content {
+
+        padding:
+            0 18px 30px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0;
+
+    }
+
+
+    .activity-form {
+
+        padding:
+            22px;
+
+    }
+
+
+    .form-card-header {
+
+        padding:
+            20px;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction:
+            column-reverse;
+
+    }
+
+
+    .cancel-btn,
+    .submit-btn {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header {
+
+        padding:
+            20px 16px;
+
+    }
+
+
+    .activity-form-content {
+
+        padding:
+            0 16px 25px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size:
+            23px;
+
+    }
+
+}

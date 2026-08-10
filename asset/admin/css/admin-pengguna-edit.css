@@ -1,0 +1,921 @@
+/* =========================================================
+   IR-KVKS ADMIN
+   EDIT PENGGUNA
+========================================================= */
+
+:root {
+
+    --user-bg: #f4f7fb;
+    --user-card: #ffffff;
+    --user-soft: #f8fafc;
+
+    --user-heading: #172033;
+    --user-text: #334155;
+    --user-secondary: #64748b;
+    --user-muted: #94a3b8;
+
+    --user-border: #e2e8f0;
+
+    --user-blue: #2563eb;
+    --user-blue-hover: #1d4ed8;
+    --user-blue-light: #eff6ff;
+
+    --user-red: #ef4444;
+    --user-red-light: #fef2f2;
+
+    --user-radius: 18px;
+
+    --user-shadow:
+        0 8px 30px rgba(15, 23, 42, .06);
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    background: var(--user-bg);
+
+    color: var(--user-text);
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px 35px 25px;
+
+}
+
+
+.page-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 9px;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+}
+
+
+.page-header h1 {
+
+    margin: 10px 0 7px;
+
+    color: var(--user-heading);
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: var(--user-secondary);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 0 17px;
+
+    border-radius: 12px;
+
+    background: var(--user-card);
+
+    border: 1px solid var(--user-border);
+
+    color: var(--user-text);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .25s ease;
+
+}
+
+
+.back-btn:hover {
+
+    border-color: var(--user-blue);
+
+    color: var(--user-blue);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.user-edit-content {
+    margin: auto;
+    padding: 0 35px 40px;
+
+    max-width: 1000px;
+
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.form-alert {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+}
+
+
+.form-alert.error {
+
+    background: var(--user-red-light);
+
+    color: var(--user-red);
+
+    border: 1px solid rgba(239, 68, 68, .15);
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.user-edit-card {
+
+    width: 100%;
+
+    background: var(--user-card);
+
+    border: 1px solid var(--user-border);
+
+    border-radius: var(--user-radius);
+
+    box-shadow: var(--user-shadow);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 24px 28px;
+
+    border-bottom: 1px solid var(--user-border);
+
+}
+
+
+.form-header-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+}
+
+
+.form-header-icon i {
+
+    font-size: 18px;
+
+}
+
+
+.form-card-header h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--user-heading);
+
+    font-size: 17px;
+
+}
+
+
+.form-card-header p {
+
+    margin: 0;
+
+    color: var(--user-secondary);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.user-edit-form {
+
+    padding: 28px;
+
+}
+
+
+/* =========================================================
+   PROFILE UPLOAD
+========================================================= */
+
+.profile-upload-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 20px;
+
+    margin-bottom: 28px;
+
+    background: var(--user-soft);
+
+    border: 1px solid var(--user-border);
+
+    border-radius: 15px;
+
+}
+
+
+.current-profile {
+
+    width: 95px;
+
+    height: 95px;
+
+    flex-shrink: 0;
+
+}
+
+
+.current-profile img,
+.profile-placeholder {
+
+    width: 95px;
+
+    height: 95px;
+
+    border-radius: 50%;
+
+}
+
+
+.current-profile img {
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, .12);
+
+}
+
+
+.profile-placeholder {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, .08);
+
+}
+
+
+.profile-placeholder i {
+
+    font-size: 32px;
+
+}
+
+
+.upload-info h3 {
+
+    margin: 0 0 5px;
+
+    color: var(--user-heading);
+
+    font-size: 15px;
+
+}
+
+
+.upload-info p {
+
+    margin: 0 0 12px;
+
+    color: var(--user-secondary);
+
+    font-size: 12px;
+
+}
+
+
+.upload-info small {
+
+    display: block;
+
+    margin-top: 9px;
+
+    color: var(--user-muted);
+
+    font-size: 11px;
+
+}
+
+
+.upload-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border-radius: 9px;
+
+    background: var(--user-blue);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .25s ease;
+
+}
+
+
+.upload-btn:hover {
+
+    background: var(--user-blue-hover);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--user-heading);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+}
+
+
+.form-group label span {
+
+    color: var(--user-red);
+
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+
+    position: relative;
+
+}
+
+
+.input-icon > i {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    color: var(--user-muted);
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+}
+
+
+.input-icon input,
+.input-icon select {
+
+    width: 100%;
+
+    height: 46px;
+
+    box-sizing: border-box;
+
+    padding: 0 15px 0 43px;
+
+    border: 1px solid var(--user-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: var(--user-card);
+
+    color: var(--user-text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: .25s ease;
+
+}
+
+
+.input-icon input:focus,
+.input-icon select:focus {
+
+    border-color: var(--user-blue);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .10);
+
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.form-info {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    margin-bottom: 25px;
+
+    background: var(--user-blue-light);
+
+    border-radius: 12px;
+
+    color: var(--user-blue);
+
+}
+
+
+.form-info > i {
+
+    margin-top: 2px;
+
+}
+
+
+.form-info strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+
+}
+
+
+.form-info p {
+
+    margin: 0;
+
+    color: var(--user-secondary);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--user-border);
+
+}
+
+
+.cancel-btn,
+.submit-btn {
+
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+
+}
+
+
+.cancel-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--user-soft);
+
+    color: var(--user-secondary);
+
+    border: 1px solid var(--user-border);
+
+}
+
+
+.cancel-btn:hover {
+
+    color: var(--user-text);
+
+    border-color: #cbd5e1;
+
+}
+
+
+.submit-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    background: var(--user-blue);
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, .18);
+
+}
+
+
+.submit-btn:hover {
+
+    background: var(--user-blue-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 23px rgba(37, 99, 235, .25);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --user-bg: #0b1220;
+
+    --user-card: #151f32;
+
+    --user-soft: #1a263a;
+
+    --user-heading: #f8fafc;
+
+    --user-text: #e5edf8;
+
+    --user-secondary: #a9b8cc;
+
+    --user-muted: #7f91aa;
+
+    --user-border: #2a3a52;
+
+    --user-blue: #3b82f6;
+
+    --user-blue-hover: #60a5fa;
+
+    --user-blue-light: rgba(59, 130, 246, .14);
+
+    --user-red: #f87171;
+
+    --user-red-light: rgba(248, 113, 113, .12);
+
+}
+
+
+body.dark-mode .input-icon input,
+body.dark-mode .input-icon select {
+
+    background: var(--user-card);
+
+    color: var(--user-text);
+
+}
+
+
+body.dark-mode .current-profile img {
+
+    border-color: var(--user-card);
+
+}
+
+
+body.dark-mode .profile-placeholder {
+
+    border-color: var(--user-card);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+
+    }
+
+
+    .page-header .back-btn {
+
+        width: 100%;
+
+    }
+
+
+    .user-edit-content {
+
+        padding: 0 25px 30px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header {
+
+        padding: 20px 16px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .user-edit-content {
+
+        padding: 0 16px 25px;
+
+    }
+
+
+    .user-edit-form {
+
+        padding: 20px;
+
+    }
+
+
+    .form-card-header {
+
+        padding: 20px;
+
+    }
+
+
+    .profile-upload-section {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .upload-info {
+
+        width: 100%;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .cancel-btn,
+    .submit-btn {
+
+        width: 100%;
+
+    }
+
+}

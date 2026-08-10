@@ -12,7 +12,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <div class="logo">
 
-            <img src="<?= $baseUrl ?>asset/images/logo.png"
+            <img src="<?= $baseUrl ?>asset/images/logo kv.png"
                  class="logo-img"
                  alt="IR-KVKS">
 
@@ -77,7 +77,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
             </a>
 
-            <a href="#">
+            <a href="<?= $baseUrl ?>pages/pelajar/tetapan.php">
 
                 <i class="fa-solid fa-gear"></i>
 

@@ -1,0 +1,1061 @@
+/* =================================================
+   IR-KVKS ADMIN
+   PENGGUNA
+================================================= */
+
+:root {
+
+    --user-bg: #f4f7fb;
+
+    --user-card: #ffffff;
+
+    --user-soft: #f8fafc;
+
+    --user-heading: #172033;
+
+    --user-text: #334155;
+
+    --user-secondary: #64748b;
+
+    --user-muted: #94a3b8;
+
+    --user-border: #e2e8f0;
+
+    --user-blue: #2563eb;
+
+    --user-blue-light: #eff6ff;
+
+    --user-blue-hover: #1d4ed8;
+
+    --user-green: #10b981;
+
+    --user-green-light: #ecfdf5;
+
+    --user-red: #ef4444;
+
+    --user-red-light: #fef2f2;
+
+    --user-purple: #7c3aed;
+
+    --user-purple-light: #f5f3ff;
+
+    --user-orange: #f97316;
+
+    --user-orange-light: #fff7ed;
+
+    --user-shadow:
+        0 8px 30px rgba(15, 23, 42, .06);
+
+    --user-shadow-hover:
+        0 14px 35px rgba(15, 23, 42, .10);
+
+    --user-radius: 18px;
+}
+
+
+/* =================================================
+   BODY
+================================================= */
+
+body {
+
+    margin: 0;
+
+    background: var(--user-bg);
+
+    color: var(--user-text);
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+}
+
+
+/* =================================================
+   MAIN
+================================================= */
+
+.admin-main {
+
+    min-height: 100vh;
+
+    background: var(--user-bg);
+}
+
+
+/* =================================================
+   PAGE HEADER
+================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px 35px 25px;
+}
+
+
+.page-header h1 {
+
+    margin: 10px 0 7px;
+
+    color: var(--user-heading);
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    letter-spacing: -.5px;
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: var(--user-secondary);
+
+    font-size: 14px;
+}
+
+
+/* =================================================
+   BADGE
+================================================= */
+
+.page-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 9px;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+    border: 1px solid
+        rgba(37, 99, 235, .12);
+
+    font-size: 12px;
+
+    font-weight: 650;
+}
+
+
+/* =================================================
+   ADD BUTTON
+================================================= */
+
+.add-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 44px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--user-blue);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, .18);
+
+    transition: .25s ease;
+}
+
+
+.add-btn:hover {
+
+    background: var(--user-blue-hover);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(37, 99, 235, .25);
+}
+
+
+/* =================================================
+   CONTENT
+================================================= */
+
+.user-content {
+
+    padding: 0 35px 40px;
+}
+
+
+/* =================================================
+   SEARCH
+================================================= */
+
+.search-box {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    margin-bottom: 22px;
+
+    box-sizing: border-box;
+
+    background: var(--user-card);
+
+    border: 1px solid var(--user-border);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(15, 23, 42, .03);
+
+    transition: .25s ease;
+}
+
+
+.search-box:focus-within {
+
+    border-color: var(--user-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .10);
+}
+
+
+.search-box i {
+
+    color: var(--user-muted);
+
+    font-size: 15px;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--user-text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+
+.search-box input::placeholder {
+
+    color: var(--user-muted);
+}
+
+
+/* =================================================
+   CARD
+================================================= */
+
+.user-card {
+
+    width: 100%;
+
+    background: var(--user-card);
+
+    border: 1px solid var(--user-border);
+
+    border-radius: var(--user-radius);
+
+    box-shadow: var(--user-shadow);
+
+    overflow: hidden;
+
+    transition: .3s ease;
+}
+
+
+.user-card:hover {
+
+    box-shadow: var(--user-shadow-hover);
+}
+
+
+/* =================================================
+   TABLE HEADER
+================================================= */
+
+.table-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid
+        var(--user-border);
+}
+
+
+.table-header h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--user-heading);
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.table-header p {
+
+    margin: 0;
+
+    color: var(--user-secondary);
+
+    font-size: 12px;
+}
+
+
+/* =================================================
+   USER COUNT
+================================================= */
+
+.user-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+/* =================================================
+   TABLE CONTAINER
+================================================= */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =================================================
+   TABLE
+================================================= */
+
+#userTable {
+
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: collapse;
+}
+
+
+/* =================================================
+   TABLE HEAD
+================================================= */
+
+#userTable thead {
+
+    background: var(--user-soft);
+}
+
+
+#userTable th {
+
+    padding: 15px 18px;
+
+    color: var(--user-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .4px;
+
+    border-bottom:
+        1px solid var(--user-border);
+
+    white-space: nowrap;
+}
+
+
+/* =================================================
+   TABLE BODY
+================================================= */
+
+#userTable td {
+
+    padding: 16px 18px;
+
+    color: var(--user-text);
+
+    font-size: 13px;
+
+    border-bottom:
+        1px solid var(--user-border);
+
+    vertical-align: middle;
+}
+
+
+#userTable tbody tr {
+
+    transition: .2s ease;
+}
+
+
+#userTable tbody tr:hover {
+
+    background: var(--user-soft);
+}
+
+
+#userTable tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+/* =================================================
+   USER PROFILE
+================================================= */
+
+.user-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 200px;
+}
+
+
+.user-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+}
+
+
+.user-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.default-avatar {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+
+    font-size: 16px;
+}
+
+
+.user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.user-info strong {
+
+    color: var(--user-heading);
+
+    font-size: 13px;
+
+    font-weight: 650;
+}
+
+
+.user-info span {
+
+    color: var(--user-muted);
+
+    font-size: 10px;
+}
+
+
+/* =================================================
+   EMAIL
+================================================= */
+
+.email {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--user-secondary);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.email i {
+
+    color: var(--user-blue);
+}
+
+
+/* =================================================
+   PHONE
+================================================= */
+
+.phone {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--user-secondary);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.phone i {
+
+    color: var(--user-green);
+}
+
+
+.not-available {
+
+    color: var(--user-muted);
+
+    font-size: 12px;
+}
+
+
+/* =================================================
+   ROLE
+================================================= */
+
+.role {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+.role.admin {
+
+    background: var(--user-red-light);
+
+    color: var(--user-red);
+}
+
+
+.role.pensyarah {
+
+    background: var(--user-purple-light);
+
+    color: var(--user-purple);
+}
+
+
+.role.pelajar {
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+}
+
+
+/* =================================================
+   STATUS
+================================================= */
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+.status.active {
+
+    background: var(--user-green-light);
+
+    color: var(--user-green);
+}
+
+
+.status.inactive {
+
+    background: var(--user-red-light);
+
+    color: var(--user-red);
+}
+
+
+.status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =================================================
+   DATE
+================================================= */
+
+.date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--user-secondary);
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+.date i {
+
+    color: var(--user-blue);
+}
+
+
+/* =================================================
+   ACTION
+================================================= */
+
+.action-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.action-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+
+.action-btn i {
+
+    font-size: 12px;
+}
+
+
+.action-btn.edit {
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+}
+
+
+.action-btn.edit:hover {
+
+    background: var(--user-blue);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.action-btn.delete {
+
+    background: var(--user-red-light);
+
+    color: var(--user-red);
+}
+
+
+.action-btn.delete:hover {
+
+    background: var(--user-red);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================================
+   EMPTY
+================================================= */
+
+.empty-table {
+
+    padding: 70px 20px !important;
+
+    text-align: center !important;
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: var(--user-blue-light);
+
+    color: var(--user-blue);
+}
+
+
+.empty-icon i {
+
+    font-size: 24px;
+}
+
+
+.empty-table h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--user-heading);
+
+    font-size: 17px;
+}
+
+
+.empty-table p {
+
+    margin: 0 0 20px;
+
+    color: var(--user-secondary);
+
+    font-size: 13px;
+}
+
+
+/* =================================================
+   DARK MODE
+================================================= */
+
+body.dark-mode {
+
+    --user-bg: #0b1220;
+
+    --user-card: #151f32;
+
+    --user-soft: #1a263a;
+
+    --user-heading: #f8fafc;
+
+    --user-text: #e5edf8;
+
+    --user-secondary: #a9b8cc;
+
+    --user-muted: #7f91aa;
+
+    --user-border: #2a3a52;
+
+    --user-blue: #60a5fa;
+
+    --user-blue-light:
+        rgba(59, 130, 246, .14);
+
+    --user-blue-hover: #3b82f6;
+
+    --user-green: #34d399;
+
+    --user-green-light:
+        rgba(52, 211, 153, .12);
+
+    --user-red: #f87171;
+
+    --user-red-light:
+        rgba(248, 113, 113, .12);
+
+    --user-purple: #a78bfa;
+
+    --user-purple-light:
+        rgba(167, 139, 250, .12);
+}
+
+
+body.dark-mode
+#userTable thead {
+
+    background: var(--user-soft);
+}
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 992px) {
+
+    .page-header {
+
+        padding: 25px;
+    }
+
+
+    .user-content {
+
+        padding: 0 25px 35px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 26px;
+    }
+
+
+    .page-header .add-btn {
+
+        width: 100%;
+    }
+
+
+    .user-content {
+
+        padding: 0 18px 30px;
+    }
+
+
+    .search-box {
+
+        max-width: none;
+    }
+
+
+    .table-header {
+
+        padding: 18px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header {
+
+        padding: 20px 16px;
+    }
+
+
+    .user-content {
+
+        padding: 0 16px 25px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 23px;
+    }
+
+
+    .table-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

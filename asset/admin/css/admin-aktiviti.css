@@ -1,0 +1,1168 @@
+/* =========================================================
+   IR-KVKS ADMIN - AKTIVITI
+========================================================= */
+
+:root {
+
+    --activity-bg: #f4f7fb;
+
+    --activity-card: #ffffff;
+
+    --activity-soft: #f8fafc;
+
+    --activity-heading: #172033;
+
+    --activity-text: #334155;
+
+    --activity-secondary: #64748b;
+
+    --activity-muted: #94a3b8;
+
+    --activity-border: #e2e8f0;
+
+    --activity-blue: #2563eb;
+
+    --activity-blue-light: #eff6ff;
+
+    --activity-blue-hover: #1d4ed8;
+
+    --activity-green: #10b981;
+
+    --activity-green-light: #ecfdf5;
+
+    --activity-red: #ef4444;
+
+    --activity-red-light: #fef2f2;
+
+    --activity-shadow:
+        0 8px 30px rgba(15, 23, 42, .06);
+
+    --activity-shadow-hover:
+        0 14px 35px rgba(15, 23, 42, .10);
+
+    --activity-radius: 18px;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    background:
+        var(--activity-bg);
+
+    color:
+        var(--activity-text);
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.admin-main {
+    min-height: 100vh;
+
+    background:
+        var(--activity-bg);
+
+    transition:
+        background-color .3s ease;
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        40px 35px 25px;
+
+}
+
+
+.page-header h1 {
+
+    margin:
+        10px 0 7px;
+
+    color:
+        var(--activity-heading);
+
+    font-size:
+        30px;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        -.5px;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.page-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--activity-blue-light);
+
+    color:
+        var(--activity-blue);
+
+    border:
+        1px solid
+        rgba(37, 99, 235, .12);
+
+    font-size:
+        12px;
+
+    font-weight:
+        650;
+
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 44px;
+
+    padding:
+        0 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        var(--activity-blue);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, .18);
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.add-btn:hover {
+
+    background:
+        var(--activity-blue-hover);
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(37, 99, 235, .25);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.activity-content {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding:
+        0 35px 40px;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        0 16px;
+
+    margin-bottom: 22px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--activity-card);
+
+    border:
+        1px solid
+        var(--activity-border);
+
+    border-radius:
+        13px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(15, 23, 42, .03);
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.search-box:focus-within {
+
+    border-color:
+        var(--activity-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .10);
+
+}
+
+
+.search-box i {
+
+    color:
+        var(--activity-muted);
+
+    font-size:
+        15px;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        transparent;
+
+    color:
+        var(--activity-text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+}
+
+
+.search-box input::placeholder {
+
+    color:
+        var(--activity-muted);
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.activity-card {
+
+    width: 100%;
+
+    background:
+        var(--activity-card);
+
+    border:
+        1px solid
+        var(--activity-border);
+
+    border-radius:
+        var(--activity-radius);
+
+    box-shadow:
+        var(--activity-shadow);
+
+    overflow: hidden;
+
+    transition:
+        all .3s ease;
+
+}
+
+
+.activity-card:hover {
+
+    box-shadow:
+        var(--activity-shadow-hover);
+
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        22px 24px;
+
+    border-bottom:
+        1px solid
+        var(--activity-border);
+
+}
+
+
+.table-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--activity-heading);
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+}
+
+
+.table-header p {
+
+    margin: 0;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        12px;
+
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+#activityTable {
+
+    width: 100%;
+
+    border-collapse:
+        collapse;
+
+    min-width:
+        900px;
+
+}
+
+
+/* =========================================================
+   TABLE HEAD
+========================================================= */
+
+#activityTable thead {
+
+    background:
+        var(--activity-soft);
+
+}
+
+
+#activityTable th {
+
+    padding:
+        15px 18px;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-align:
+        left;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .4px;
+
+    border-bottom:
+        1px solid
+        var(--activity-border);
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+#activityTable td {
+
+    padding:
+        17px 18px;
+
+    color:
+        var(--activity-text);
+
+    font-size:
+        13px;
+
+    border-bottom:
+        1px solid
+        var(--activity-border);
+
+    vertical-align:
+        middle;
+
+}
+
+
+#activityTable tbody tr {
+
+    transition:
+        background-color .2s ease;
+
+}
+
+
+#activityTable tbody tr:hover {
+
+    background:
+        var(--activity-soft);
+
+}
+
+
+#activityTable tbody tr:last-child td {
+
+    border-bottom:
+        none;
+
+}
+
+
+/* =========================================================
+   ACTIVITY TITLE
+========================================================= */
+
+.activity-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width:
+        250px;
+
+}
+
+
+.activity-title strong {
+
+    display: block;
+
+    color:
+        var(--activity-heading);
+
+    font-size:
+        13px;
+
+    font-weight:
+        650;
+
+    line-height:
+        1.4;
+
+}
+
+
+.activity-title small {
+
+    display: block;
+
+    margin-top:
+        4px;
+
+    max-width:
+        280px;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.4;
+
+}
+
+
+/* =========================================================
+   ACTIVITY ICON
+========================================================= */
+
+.activity-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        11px;
+
+    background:
+        var(--activity-blue-light);
+
+    color:
+        var(--activity-blue);
+
+}
+
+
+.activity-icon i {
+
+    font-size:
+        15px;
+
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.activity-date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        12px;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.activity-date i {
+
+    color:
+        var(--activity-blue);
+
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.activity-location {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        12px;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.activity-location i {
+
+    color:
+        var(--activity-blue);
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        20px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        650;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.status.active {
+
+    background:
+        var(--activity-green-light);
+
+    color:
+        var(--activity-green);
+
+}
+
+
+.status.inactive {
+
+    background:
+        var(--activity-red-light);
+
+    color:
+        var(--activity-red);
+
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.action-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.action-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        9px;
+
+    text-decoration:
+        none;
+
+    transition:
+        all .2s ease;
+
+}
+
+
+.action-btn i {
+
+    font-size:
+        12px;
+
+}
+
+
+/* EDIT */
+
+.action-btn.edit {
+
+    background:
+        var(--activity-blue-light);
+
+    color:
+        var(--activity-blue);
+
+}
+
+
+.action-btn.edit:hover {
+
+    background:
+        var(--activity-blue);
+
+    color:
+        white;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* DELETE */
+
+.action-btn.delete {
+
+    background:
+        var(--activity-red-light);
+
+    color:
+        var(--activity-red);
+
+}
+
+
+.action-btn.delete:hover {
+
+    background:
+        var(--activity-red);
+
+    color:
+        white;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-table {
+
+    padding:
+        70px 20px !important;
+
+    text-align:
+        center !important;
+
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin:
+        0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+        18px;
+
+    background:
+        var(--activity-blue-light);
+
+    color:
+        var(--activity-blue);
+
+}
+
+
+.empty-icon i {
+
+    font-size:
+        24px;
+
+}
+
+
+.empty-table h3 {
+
+    margin:
+        0 0 7px;
+
+    color:
+        var(--activity-heading);
+
+    font-size:
+        17px;
+
+}
+
+
+.empty-table p {
+
+    margin:
+        0 0 20px;
+
+    color:
+        var(--activity-secondary);
+
+    font-size:
+        13px;
+
+}
+
+
+.empty-table .add-btn {
+
+    display:
+        inline-flex;
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --activity-bg:
+        #0b1220;
+
+    --activity-card:
+        #151f32;
+
+    --activity-soft:
+        #1a263a;
+
+    --activity-heading:
+        #f8fafc;
+
+    --activity-text:
+        #e5edf8;
+
+    --activity-secondary:
+        #a9b8cc;
+
+    --activity-muted:
+        #7f91aa;
+
+    --activity-border:
+        #2a3a52;
+
+    --activity-blue:
+        #3b82f6;
+
+    --activity-blue-light:
+        rgba(59, 130, 246, .14);
+
+    --activity-blue-hover:
+        #60a5fa;
+
+    --activity-green:
+        #34d399;
+
+    --activity-green-light:
+        rgba(52, 211, 153, .12);
+
+    --activity-red:
+        #f87171;
+
+    --activity-red-light:
+        rgba(248, 113, 113, .12);
+
+    --activity-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, .25);
+
+    --activity-shadow-hover:
+        0 15px 40px
+        rgba(0, 0, 0, .35);
+
+}
+
+
+/* =========================================================
+   DARK TABLE
+========================================================= */
+
+body.dark-mode
+#activityTable thead {
+
+    background:
+        #1a263a;
+
+}
+
+
+body.dark-mode
+#activityTable tbody tr:hover {
+
+    background:
+        #1a263a;
+
+}
+
+
+/* =========================================================
+   DARK SEARCH
+========================================================= */
+
+body.dark-mode
+.search-box {
+
+    background:
+        #151f32;
+
+    border-color:
+        #2a3a52;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .page-header {
+
+        padding:
+            25px;
+
+    }
+
+
+    .activity-content {
+
+        padding:
+            0 25px 35px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            18px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .page-header .add-btn {
+
+        width:
+            100%;
+
+    }
+
+
+    .activity-content {
+
+        padding:
+            0 18px 30px;
+
+    }
+
+
+    .search-box {
+
+        max-width:
+            none;
+
+    }
+
+
+    .table-header {
+
+        padding:
+            18px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header {
+
+        padding:
+            20px 16px;
+
+    }
+
+
+    .activity-content {
+
+        padding:
+            0 16px 25px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size:
+            23px;
+
+    }
+
+}

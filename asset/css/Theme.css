@@ -1,0 +1,1760 @@
+/* =========================================================
+   IR-KVKS THEME
+   LIGHT + MODERN DARK MODE
+========================================================= */
+
+
+/* =========================================================
+   1. LIGHT MODE
+   WARNA ASAL IR-KVKS
+========================================================= */
+
+:root {
+
+    /* Background */
+    --bg-main: #f4f7fb;
+    --bg-secondary: #eef3f9;
+
+    /* Card */
+    --bg-card: #ffffff;
+    --bg-card-soft: #f8fafc;
+    --bg-hover: #f1f5f9;
+
+    /* Text */
+    --text-heading: #172033;
+    --text-main: #334155;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+
+    /* Border */
+    --border: #e2e8f0;
+    --border-light: #edf2f7;
+
+    /* Topbar */
+    --navbar-bg: #ffffff;
+
+    /* Input */
+    --input-bg: #f1f5f9;
+    --input-border: #e2e8f0;
+
+    /* Accent */
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+
+    --green: #10b981;
+    --green-light: #ecfdf5;
+
+    --purple: #8b5cf6;
+    --purple-light: #f5f3ff;
+
+    --orange: #f59e0b;
+    --orange-light: #fffbeb;
+
+    --red: #ef4444;
+    --red-light: #fef2f2;
+
+    /* Shadow */
+    --shadow:
+        0 8px 30px rgba(15, 23, 42, 0.06);
+
+    --shadow-hover:
+        0 14px 35px rgba(15, 23, 42, 0.10);
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+}
+
+
+/* =========================================================
+   2. MODERN DARK MODE
+========================================================= */
+/* =====================================================
+   IR-KVKS DARK MODE
+===================================================== */
+
+body.dark-mode {
+
+    --bg-main: #0b1220;
+
+    --bg-card: #151f32;
+
+    --bg-card-soft: #1a263a;
+
+    --text-main: #e5edf8;
+
+    --text-heading: #f8fafc;
+
+    --text-secondary: #a9b8cc;
+
+    --text-muted: #7f91aa;
+
+    --border: #2a3a52;
+
+    --navbar-bg: #101a2c;
+
+    --input-bg: #1a263a;
+
+    --shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    --blue: #3b82f6;
+
+    --green: #34d399;
+
+    --purple: #a78bfa;
+
+    --orange: #fbbf24;
+}
+
+/* =========================================================
+   3. BODY
+========================================================= */
+
+html,
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+body {
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   4. MAIN CONTENT
+========================================================= */
+
+.main-content {
+
+    background: var(--bg-main);
+    color: var(--text-main);
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+
+/* =========================================================
+   5. TOPBAR
+========================================================= */
+
+.topbar {
+
+    background: var(--navbar-bg);
+
+    border-bottom:
+        1px solid var(--border);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* Search */
+
+.search-box,
+.search-container {
+
+    background: var(--input-bg);
+
+    border:
+        1px solid var(--input-border);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+
+.search-box input,
+.search-container input {
+
+    color: var(--text-main);
+}
+
+
+.search-box input::placeholder,
+.search-container input::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   6. TOPBAR BUTTON
+========================================================= */
+
+.notification-btn,
+.message-btn {
+
+    background: var(--bg-card-soft);
+
+    color: var(--text-main);
+
+    border:
+        1px solid var(--border);
+
+    transition: .25s ease;
+}
+
+
+.notification-btn:hover,
+.message-btn:hover {
+
+    background: var(--bg-hover);
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   7. PROFILE AREA
+========================================================= */
+
+.profile-area,
+.user-profile {
+
+    background: var(--bg-card-soft);
+
+    color: var(--text-main);
+
+    border:
+        1px solid var(--border);
+
+    transition: .25s ease;
+}
+
+
+.profile-area:hover,
+.user-profile:hover {
+
+    background: var(--bg-hover);
+
+    border-color: var(--blue);
+}
+
+
+.profile-area span,
+.user-profile span {
+
+    color: var(--text-main);
+}
+
+
+/* =========================================================
+   8. PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    color: var(--text-main);
+}
+
+
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+
+    color: var(--text-heading);
+}
+
+
+.page-header p {
+
+    color: var(--text-secondary);
+}
+
+
+.page-badge {
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+
+    border:
+        1px solid rgba(37, 99, 235, .15);
+}
+
+
+/* =========================================================
+   9. DASHBOARD GREETING
+========================================================= */
+
+.greeting-text {
+
+    color: var(--text-secondary);
+}
+
+
+.user-name {
+
+    color: var(--text-heading);
+}
+
+
+.institution-name {
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   10. ALL CARDS
+========================================================= */
+
+.stat-card,
+.news-card,
+.calendar-card,
+.quick-card,
+.material-card,
+.task-card,
+.class-card,
+.activity-card,
+.empty-card,
+.profile-card,
+.profile-header,
+.profile-content,
+.settings-card {
+
+    background: var(--bg-card);
+
+    color: var(--text-main);
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .25s ease;
+}
+
+
+/* Hover */
+
+.stat-card:hover,
+.class-card:hover,
+.activity-card:hover {
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+/* =========================================================
+   11. CARD HEADINGS
+========================================================= */
+
+.stat-card h1,
+.stat-card h2,
+.stat-card h3,
+.stat-card h4,
+
+.news-card h1,
+.news-card h2,
+.news-card h3,
+.news-card h4,
+
+.calendar-card h1,
+.calendar-card h2,
+.calendar-card h3,
+.calendar-card h4,
+
+.quick-card h1,
+.quick-card h2,
+.quick-card h3,
+.quick-card h4,
+
+.material-card h1,
+.material-card h2,
+.material-card h3,
+.material-card h4,
+
+.task-card h1,
+.task-card h2,
+.task-card h3,
+.task-card h4,
+
+.settings-card h1,
+.settings-card h2,
+.settings-card h3,
+.settings-card h4 {
+
+    color: var(--text-heading);
+}
+
+
+/* =========================================================
+   12. CARD TEXT
+========================================================= */
+
+.stat-card p,
+.news-card p,
+.calendar-card p,
+.quick-card p,
+.material-card p,
+.task-card p {
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   13. STAT NUMBER
+========================================================= */
+
+.stat-number {
+
+    color: var(--text-heading);
+}
+
+
+.stat-label {
+
+    color: var(--text-secondary);
+}
+
+
+.stat-link {
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   14. NEWS
+========================================================= */
+
+.news-item {
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.news-item h4 {
+
+    color: var(--text-heading);
+}
+
+
+.news-item p {
+
+    color: var(--text-secondary);
+}
+
+
+.news-item small {
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   15. MATERIAL
+========================================================= */
+
+.material-item {
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.material-info h4 {
+
+    color: var(--text-heading);
+}
+
+
+.material-info p {
+
+    color: var(--text-secondary);
+}
+
+
+.material-info small {
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   16. TASK
+========================================================= */
+
+.task-item {
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.task-item h4 {
+
+    color: var(--text-heading);
+}
+
+
+.task-item small {
+
+    color: var(--text-secondary);
+}
+
+
+.task-item span {
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   17. QUICK BUTTON
+========================================================= */
+
+.quick-btn {
+
+    background: var(--bg-card-soft);
+
+    border:
+        1px solid var(--border);
+
+    color: var(--text-main);
+
+    transition: .25s ease;
+}
+
+
+.quick-btn span {
+
+    color: var(--text-main);
+}
+
+
+.quick-btn:hover {
+
+    background: var(--bg-hover);
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* =========================================================
+   18. SEARCH / FILTER
+========================================================= */
+
+.activity-search,
+.search-filter {
+
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.activity-search input,
+.search-filter input {
+
+    background: transparent;
+
+    color: var(--text-main);
+}
+
+
+.activity-search input::placeholder,
+.search-filter input::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   19. AKADEMIK
+========================================================= */
+
+.class-card {
+
+    color: var(--text-main);
+}
+
+
+.class-card h3 {
+
+    color: var(--text-heading);
+}
+
+
+.class-card p {
+
+    color: var(--text-secondary);
+}
+
+
+.class-info label {
+
+    color: var(--text-muted);
+}
+
+
+.class-info span {
+
+    color: var(--text-main);
+}
+
+
+.class-stats {
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.class-stats h4 {
+
+    color: var(--text-heading);
+}
+
+
+.class-stats p {
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   20. AKTIVITI
+========================================================= */
+
+.activity-card {
+
+    color: var(--text-main);
+}
+
+
+.activity-title {
+
+    color: var(--text-heading);
+}
+
+
+.activity-description {
+
+    color: var(--text-secondary);
+}
+
+
+.activity-info-item {
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.activity-info-item span {
+
+    color: var(--text-muted);
+}
+
+
+.activity-info-item strong {
+
+    color: var(--text-main);
+}
+
+
+/* =========================================================
+   21. PROFILE
+========================================================= */
+
+.profile-card h1,
+.profile-card h2,
+.profile-card h3 {
+
+    color: var(--text-heading);
+}
+
+
+.profile-card p,
+.profile-card span {
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   22. SETTINGS
+========================================================= */
+
+.settings-card-header h2 {
+
+    color: var(--text-heading);
+}
+
+
+.settings-card-header p {
+
+    color: var(--text-secondary);
+}
+
+
+.setting-item {
+
+    color: var(--text-main);
+
+    border-bottom:
+        1px solid var(--border);
+
+    transition: .25s ease;
+}
+
+
+.setting-item:hover {
+
+    background: var(--bg-card-soft);
+}
+
+
+.setting-info h3 {
+
+    color: var(--text-heading);
+}
+
+
+.setting-info p {
+
+    color: var(--text-secondary);
+}
+
+
+.setting-arrow {
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   23. SETTINGS ICON
+========================================================= */
+
+.setting-icon {
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+}
+
+
+.setting-icon.purple-bg {
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+}
+
+
+.setting-icon.green-bg {
+
+    background: var(--green-light);
+
+    color: var(--green);
+}
+
+
+.setting-icon.orange-bg {
+
+    background: var(--orange-light);
+
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   24. TOGGLE SWITCH
+========================================================= */
+
+.switch .slider {
+
+    background: #cbd5e1;
+
+    transition: .3s ease;
+}
+
+
+.switch input:checked + .slider {
+
+    background: var(--blue);
+}
+
+
+body.dark-mode .switch .slider {
+
+    background: #334155;
+}
+
+
+body.dark-mode .switch input:checked + .slider {
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   25. LOGOUT
+========================================================= */
+
+.logout-card {
+
+    background: var(--red-light);
+
+    border:
+        1px solid rgba(239, 68, 68, .20);
+
+    color: var(--text-main);
+}
+
+
+.logout-info h3 {
+
+    color: var(--text-heading);
+}
+
+
+.logout-info p {
+
+    color: var(--text-secondary);
+}
+
+
+.logout-icon {
+
+    color: var(--red);
+}
+
+
+.logout-btn {
+
+    background: var(--red);
+
+    color: #ffffff;
+
+    transition: .25s ease;
+}
+
+
+.logout-btn:hover {
+
+    filter: brightness(.92);
+
+    transform:
+        translateY(-2px);
+}
+
+
+
+/* =========================================================
+   27. DROPDOWN
+========================================================= */
+
+.dropdown-menu {
+
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.dropdown-menu a {
+
+    color: var(--text-main);
+}
+
+
+.dropdown-menu a:hover {
+
+    background: var(--bg-card-soft);
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   28. INPUT
+========================================================= */
+
+input,
+select,
+textarea {
+
+    background: var(--input-bg);
+
+    color: var(--text-main);
+
+    border:
+        1px solid var(--input-border);
+
+    transition: .25s ease;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--blue);
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .12);
+}
+
+
+/* =========================================================
+   29. TABLE
+========================================================= */
+
+table {
+
+    color: var(--text-main);
+
+    border-color: var(--border);
+}
+
+
+th {
+
+    background: var(--bg-card-soft);
+
+    color: var(--text-heading);
+}
+
+
+td {
+
+    color: var(--text-secondary);
+
+    border-color: var(--border);
+}
+
+
+tr:hover td {
+
+    background: var(--bg-card-soft);
+}
+
+
+/* =========================================================
+   30. EMPTY STATE
+========================================================= */
+
+.empty-card,
+.activity-empty {
+
+    background: var(--bg-card);
+
+    color: var(--text-main);
+
+    border:
+        1px solid var(--border);
+}
+
+
+.empty-card h2,
+.activity-empty h2 {
+
+    color: var(--text-heading);
+}
+
+
+.empty-card p,
+.activity-empty p {
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   31. CALENDAR - LIGHT
+========================================================= */
+
+#calendar,
+.fc {
+
+    color: var(--text-main);
+}
+
+
+.fc-toolbar-title {
+
+    color: var(--text-heading);
+}
+
+
+.fc-col-header-cell-cushion {
+
+    color: var(--blue);
+}
+
+
+.fc-daygrid-day-number {
+
+    color: var(--text-main);
+}
+
+
+.fc-daygrid-day {
+
+    background: var(--bg-card);
+
+    border-color: var(--border);
+}
+
+
+.fc-scrollgrid {
+
+    border-color: var(--border);
+}
+
+
+.fc-button {
+
+    background: var(--bg-card-soft) !important;
+
+    border-color: var(--border) !important;
+
+    color: var(--text-main) !important;
+}
+
+
+.fc-button:hover {
+
+    background: var(--blue) !important;
+
+    border-color: var(--blue) !important;
+
+    color: #ffffff !important;
+}
+
+
+.fc-button-primary:not(:disabled).fc-button-active {
+
+    background: var(--blue) !important;
+
+    border-color: var(--blue) !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   32. CALENDAR - DARK
+========================================================= */
+
+body.dark-mode .fc {
+
+    color: var(--text-main);
+}
+
+
+body.dark-mode .fc-toolbar-title {
+
+    color: #f8fafc;
+}
+
+
+body.dark-mode .fc-col-header-cell-cushion {
+
+    color: #93c5fd;
+}
+
+
+body.dark-mode .fc-daygrid-day-number {
+
+    color: #dbeafe;
+}
+
+
+body.dark-mode .fc-daygrid-day {
+
+    background: var(--bg-card);
+
+    border-color: var(--border);
+}
+
+
+body.dark-mode .fc-scrollgrid,
+body.dark-mode .fc-scrollgrid-section > td,
+body.dark-mode .fc-scrollgrid-section > th {
+
+    border-color: var(--border);
+}
+
+
+body.dark-mode .fc-button {
+
+    background: #24344b !important;
+
+    border-color: #334963 !important;
+
+    color: #f8fafc !important;
+}
+
+
+body.dark-mode .fc-button:hover {
+
+    background: var(--blue) !important;
+
+    border-color: var(--blue) !important;
+}
+
+
+body.dark-mode .fc-button-primary:not(:disabled).fc-button-active {
+
+    background: var(--blue) !important;
+
+    border-color: var(--blue) !important;
+}
+
+
+/* =========================================================
+   33. DARK MODE - TOPBAR
+========================================================= */
+
+body.dark-mode .topbar {
+
+    background:
+        linear-gradient(
+            135deg,
+            #101a2d,
+            #14233b
+        );
+
+    border-bottom:
+        1px solid #263852;
+}
+
+
+/* =========================================================
+   34. DARK MODE - STAT CARDS
+========================================================= */
+
+body.dark-mode .stat-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #172235,
+            #1b2940
+        );
+
+    border-color:
+        #2b3d58;
+}
+
+
+/* =========================================================
+   35. DARK MODE - CARD ACCENT
+========================================================= */
+
+body.dark-mode .stat-card.blue {
+
+    border-top:
+        2px solid #4f8cff;
+}
+
+
+body.dark-mode .stat-card.green {
+
+    border-top:
+        2px solid #2dd4a3;
+}
+
+
+body.dark-mode .stat-card.purple {
+
+    border-top:
+        2px solid #a78bfa;
+}
+
+
+body.dark-mode .stat-card.orange {
+
+    border-top:
+        2px solid #fbbf24;
+}
+
+
+/* =========================================================
+   36. DARK MODE - PAGE HEADER
+========================================================= */
+
+body.dark-mode .page-header h1,
+body.dark-mode .page-header h2 {
+
+    color: #f8fafc;
+}
+
+
+body.dark-mode .page-header p {
+
+    color: #a9b8cc;
+}
+
+
+body.dark-mode .greeting-text {
+
+    color: #9fb2cc;
+}
+
+
+body.dark-mode .user-name {
+
+    color: #f8fafc;
+}
+
+
+body.dark-mode .institution-name {
+
+    color: #9fb2cc;
+}
+
+
+/* =========================================================
+   37. DARK MODE - SETTINGS
+========================================================= */
+
+body.dark-mode .settings-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #172235,
+            #1b2940
+        );
+}
+
+
+body.dark-mode .setting-item:hover {
+
+    background: #213149;
+}
+
+
+/* =========================================================
+   38. DARK MODE - PROFILE
+========================================================= */
+
+body.dark-mode .profile-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #172235,
+            #1b2940
+        );
+}
+
+
+/* =========================================================
+   39. DARK MODE - BUTTON
+========================================================= */
+
+button {
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .2s ease;
+}
+
+
+/* =========================================================
+   40. SMOOTH THEME TRANSITION
+========================================================= */
+
+body,
+.main-content,
+.topbar,
+.sidebar,
+.stat-card,
+.news-card,
+.calendar-card,
+.quick-card,
+.material-card,
+.task-card,
+.class-card,
+.activity-card,
+.settings-card,
+.profile-card,
+.search-box,
+.search-container,
+.setting-item {
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+/* =========================================
+   GREETING SECTION - DARK MODE
+========================================= */
+
+body.dark-mode .page-header {
+    background: #111827;
+    color: #f8fafc;
+}
+
+body.dark-mode .greeting-section {
+    background: transparent;
+}
+
+body.dark-mode .greeting-text {
+    color: #94a3b8;
+}
+
+body.dark-mode .user-name {
+    color: #f8fafc;
+}
+
+body.dark-mode .institution-name {
+    color: #94a3b8;
+}
+
+body.dark-mode .wave-emoji {
+    color: initial;
+}
+/* =========================================
+   ANNOUNCEMENT CARD - DARK MODE
+========================================= */
+
+body.dark-mode .announcement-card {
+    background: #182235;
+    border: 1px solid #2a3a52;
+    color: #e5edf8;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .announcement-card p {
+    color: #a9b8cc;
+}
+/* =========================================================
+   DARK MODE - AKADEMIK
+========================================================= */
+
+/* SEARCH BOX */
+body.dark-mode #searchClass {
+    background: #182235;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+}
+
+body.dark-mode #searchClass::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .search-filter {
+    background: #151e2f;
+    border: 1px solid #334155;
+}
+
+
+/* =========================================================
+   CLASS CARD
+========================================================= */
+
+body.dark-mode .class-card {
+    background: #151e2f;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .class-card:hover {
+    background: #1a263b;
+    border-color: #3b82f6;
+}
+
+
+/* TAJUK KELAS */
+
+body.dark-mode .class-card h3 {
+    color: #f8fafc;
+}
+
+
+/* KOD SUBJEK */
+
+body.dark-mode .class-card p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   PENSYARAH & SEMESTER
+========================================================= */
+
+body.dark-mode .class-info {
+    color: #e5e7eb;
+}
+
+body.dark-mode .class-info label {
+    color: #94a3b8;
+}
+
+body.dark-mode .class-info span {
+    color: #e2e8f0;
+}
+
+
+/* =========================================================
+   CLASS STATS
+========================================================= */
+
+body.dark-mode .class-stats {
+    border-top: 1px solid #334155;
+}
+
+body.dark-mode .class-stats h4 {
+    color: #f8fafc;
+}
+
+body.dark-mode .class-stats p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   ICON KELAS
+========================================================= */
+
+body.dark-mode .class-icon {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   BUTTON MASUK KELAS
+========================================================= */
+
+body.dark-mode .enter-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark-mode .enter-btn:hover {
+    background: #3b82f6;
+}
+
+
+/* =========================================================
+   EMPTY CARD
+========================================================= */
+
+body.dark-mode .empty-card {
+    background: #151e2f;
+    border: 1px solid #334155;
+    color: #e5e7eb;
+}
+
+body.dark-mode .empty-card h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .empty-card p {
+    color: #94a3b8;
+}
+
+body.dark-mode .empty-card i {
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   PAGE HEADER AKADEMIK
+========================================================= */
+
+body.dark-mode .page-header h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .page-header p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   PAGE BADGE
+========================================================= */
+
+body.dark-mode .page-badge {
+    background: #172554;
+    color: #93c5fd;
+    border: 1px solid #1e40af;
+}
+
+/* =========================================================
+   PROFILE - DARK MODE
+========================================================= */
+
+body.dark-mode .profile-content {
+    color: var(--text-main);
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+body.dark-mode .profile-card {
+    background: #151f32 !important;
+    border: 1px solid #2a3a52 !important;
+    color: #e5edf8 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+body.dark-mode .profile-header {
+    background: #151f32 !important;
+    color: #e5edf8 !important;
+    border-color: #2a3a52 !important;
+}
+
+
+/* Nama */
+
+body.dark-mode .profile-heading h2 {
+    color: #f8fafc !important;
+}
+
+
+/* Email */
+
+body.dark-mode .profile-heading p {
+    color: #a9b8cc !important;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+body.dark-mode .profile-image-wrapper {
+    background: #1e2b40 !important;
+    border-color: #334963 !important;
+}
+
+
+/* =========================
+   ROLE BADGE
+========================= */
+
+body.dark-mode .role-badge {
+    background: rgba(37, 99, 235, 0.18) !important;
+    color: #93c5fd !important;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+body.dark-mode .profile-section {
+    background: #151f32 !important;
+    color: #e5edf8 !important;
+    border-color: #2a3a52 !important;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+body.dark-mode .section-title {
+    color: #f8fafc !important;
+    border-color: #2a3a52 !important;
+}
+
+
+body.dark-mode .section-title h3 {
+    color: #f8fafc !important;
+}
+
+
+body.dark-mode .section-title i {
+    color: #60a5fa !important;
+}
+
+
+/* =========================
+   PROFILE INFO GRID
+========================= */
+
+body.dark-mode .profile-info-grid {
+    background: transparent !important;
+}
+
+
+/* =========================
+   PROFILE INFO ITEM
+========================= */
+
+body.dark-mode .profile-info-item {
+    background: #1a263a !important;
+    border: 1px solid #2a3a52 !important;
+    color: #e5edf8 !important;
+}
+
+
+/* Label */
+
+body.dark-mode .profile-info-item .info-label {
+    color: #7f91aa !important;
+}
+
+
+/* Value */
+
+body.dark-mode .profile-info-item strong {
+    color: #f1f5f9 !important;
+}
+
+
+/* =========================
+   ACCOUNT CARD
+========================= */
+
+body.dark-mode .account-card {
+    background: #151f32 !important;
+    border: 1px solid #2a3a52 !important;
+    color: #e5edf8 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ACCOUNT ICON
+========================= */
+
+body.dark-mode .account-icon {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+}
+
+
+/* =========================
+   ACCOUNT INFO
+========================= */
+
+body.dark-mode .account-info h3 {
+    color: #f8fafc !important;
+}
+
+
+body.dark-mode .account-info p {
+    color: #a9b8cc !important;
+}
+
+
+/* =========================
+   ACTIVE BADGE
+========================= */
+
+body.dark-mode .active-badge {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+
+/* =========================
+   PROFILE TEXT GENERAL
+========================= */
+
+body.dark-mode .profile-card span,
+body.dark-mode .profile-card p {
+    color: #a9b8cc;
+}
+
+
+body.dark-mode .profile-card h1,
+body.dark-mode .profile-card h2,
+body.dark-mode .profile-card h3,
+body.dark-mode .profile-card h4 {
+    color: #f8fafc;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+body.dark-mode .profile-info-item:hover {
+    background: #202f46 !important;
+    border-color: #3b82f6 !important;
+    transition: 0.25s ease;
+}
+
+
+/* =========================
+   SMOOTH TRANSITION
+========================= */
+
+.profile-card,
+.profile-header,
+.profile-section,
+.profile-info-item,
+.account-card,
+.account-icon,
+.role-badge,
+.active-badge {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}

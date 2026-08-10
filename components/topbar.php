@@ -12,28 +12,10 @@ include(__DIR__ . "/../include/user_profile.php");
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- Search Box -->
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Cari sesuatu...">
-        </div>
-
     </div>
 
     <!-- RIGHT -->
     <div class="topbar-right">
-
-        <!-- Notification Button -->
-        <button class="icon-btn" title="Notifikasi">
-            <i class="fa-regular fa-bell"></i>
-            <span class="badge">3</span>
-        </button>
-
-        <!-- Message Button -->
-        <button class="icon-btn" title="Mesej">
-            <i class="fa-regular fa-envelope"></i>
-            <span class="badge">5</span>
-        </button>
 
         <!-- Profile -->
         <div class="profile">
